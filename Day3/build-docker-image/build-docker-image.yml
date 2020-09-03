@@ -1,0 +1,41 @@
+- name: Demonstrates building docker image via Playbook
+  hosts: localhost
+  tasks:
+  - name: Install Extra Packages for Enterprise Linux (EPEL)
+    yum: name=epel-release state=latest
+
+  - name: Install Python Package Installer (pip)
+    yum: name=python-pip state=latest
+
+  - name: Install Docker SDK
+    shell: pip install docker-py
+
+  - name: Remove all existing containers
+    shell: docker rm -f $(docker ps -aq)
+    ignore_errors: yes
+
+  - name: Delete tektutor ubuntu image
+    shell: docker rmi tektutor/ansible-ubuntu
+    ignore_errors: yes
+
+  - name: Delete tektutor centos image
+    shell: docker rmi tektutor/ansible-centos
+    ignore_errors: yes
+
+  - name: Build custom ansible ubuntu image
+    docker_image:
+        docker_host: tcp://localhost:4243
+        name: tektutor/ansible-ubuntu
+        path: .
+        dockerfile: UbuntuDockerfile
+        source: build
+        state: present
+
+  - name: Build custom ansible centos image
+    docker_image:
+        docker_host: tcp://localhost:4243
+        name: tektutor/ansible-centos
+        path: .
+        dockerfile: CentOSDockerfile
+        source: build
+        state: present

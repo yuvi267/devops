@@ -1,0 +1,3 @@
+- name: Configure nginx web root folder in Ubuntu Ansible Node
+  copy: src=default dest=/etc/nginx/sites-available/default backup=yes
+  register: copy_status

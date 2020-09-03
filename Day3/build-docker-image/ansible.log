@@ -1,0 +1,173 @@
+2020-09-02 02:09:36,919 p=51390 u=root n=ansible | PLAY [Demonstrates building docker image via Playbook] ************************************************************************
+2020-09-02 02:09:36,934 p=51390 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************************************
+2020-09-02 02:09:39,391 p=51390 u=root n=ansible | ok: [localhost]
+2020-09-02 02:09:39,447 p=51390 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *********************************************************************
+2020-09-02 02:09:59,462 p=51390 u=root n=ansible | ok: [localhost]
+2020-09-02 02:09:59,518 p=51390 u=root n=ansible | TASK [Install Python Package Installer (pip)] *********************************************************************************
+2020-09-02 02:10:13,457 p=51390 u=root n=ansible | ok: [localhost]
+2020-09-02 02:10:13,515 p=51390 u=root n=ansible | TASK [Install Docker SDK] *****************************************************************************************************
+2020-09-02 02:10:14,284 p=51390 u=root n=ansible | changed: [localhost]
+2020-09-02 02:10:14,344 p=51390 u=root n=ansible | TASK [Remove all existing containers] *****************************************************************************************
+2020-09-02 02:10:23,600 p=51390 u=root n=ansible | changed: [localhost]
+2020-09-02 02:10:23,662 p=51390 u=root n=ansible | TASK [Delete tektutor ubuntu image] *******************************************************************************************
+2020-09-02 02:10:24,963 p=51390 u=root n=ansible | changed: [localhost]
+2020-09-02 02:10:25,013 p=51390 u=root n=ansible | TASK [Delete tektutor centos image] *******************************************************************************************
+2020-09-02 02:10:25,634 p=51390 u=root n=ansible | changed: [localhost]
+2020-09-02 02:10:25,682 p=51390 u=root n=ansible | TASK [Build custom ansible ubuntu image] **************************************************************************************
+2020-09-02 02:10:26,363 p=51390 u=root n=ansible | [DEPRECATION WARNING]: Param 'path' is deprecated. See the module docs for more information. This feature will be removed in 
+version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 02:10:26,364 p=51390 u=root n=ansible | [DEPRECATION WARNING]: Param 'dockerfile' is deprecated. See the module docs for more information. This feature will be 
+removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 02:10:26,364 p=51390 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (docker_image) module: image Supported parameters include: api_version, archive_path, build, buildargs, ca_cert, client_cert, client_key, container_limits, debug, docker_host, dockerfile, force, force_absent, force_source, force_tag, http_timeout, load_path, name, nocache, path, pull, push, repository, rm, source, ssl_version, state, tag, timeout, tls, tls_hostname, use_tls, validate_certs"}
+2020-09-02 02:10:26,366 p=51390 u=root n=ansible | PLAY RECAP ********************************************************************************************************************
+2020-09-02 02:10:26,366 p=51390 u=root n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 02:12:24,902 p=53116 u=root n=ansible | PLAY [Demonstrates building docker image via Playbook] ************************************************************************
+2020-09-02 02:12:24,913 p=53116 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************************************
+2020-09-02 02:12:26,241 p=53116 u=root n=ansible | ok: [localhost]
+2020-09-02 02:12:26,262 p=53116 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *********************************************************************
+2020-09-02 02:12:39,996 p=53116 u=root n=ansible | ok: [localhost]
+2020-09-02 02:12:40,017 p=53116 u=root n=ansible | TASK [Install Python Package Installer (pip)] *********************************************************************************
+2020-09-02 02:12:53,108 p=53116 u=root n=ansible | ok: [localhost]
+2020-09-02 02:12:53,129 p=53116 u=root n=ansible | TASK [Install Docker SDK] *****************************************************************************************************
+2020-09-02 02:12:53,922 p=53116 u=root n=ansible | changed: [localhost]
+2020-09-02 02:12:53,945 p=53116 u=root n=ansible | TASK [Remove all existing containers] *****************************************************************************************
+2020-09-02 02:12:54,369 p=53116 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.133180", "end": "2020-09-02 02:12:54.339786", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:12:54.206606", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:12:54,371 p=53116 u=root n=ansible | PLAY RECAP ********************************************************************************************************************
+2020-09-02 02:12:54,371 p=53116 u=root n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 02:14:53,765 p=53462 u=root n=ansible | PLAY [Demonstrates building docker image via Playbook] **************************************************************
+2020-09-02 02:14:53,775 p=53462 u=root n=ansible | TASK [Gathering Facts] **********************************************************************************************
+2020-09-02 02:14:55,055 p=53462 u=root n=ansible | ok: [localhost]
+2020-09-02 02:14:55,085 p=53462 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] ***********************************************************
+2020-09-02 02:15:17,659 p=53462 u=root n=ansible | ok: [localhost]
+2020-09-02 02:15:17,683 p=53462 u=root n=ansible | TASK [Install Python Package Installer (pip)] ***********************************************************************
+2020-09-02 02:15:35,699 p=53462 u=root n=ansible | ok: [localhost]
+2020-09-02 02:15:35,719 p=53462 u=root n=ansible | TASK [Install Docker SDK] *******************************************************************************************
+2020-09-02 02:15:36,477 p=53462 u=root n=ansible | changed: [localhost]
+2020-09-02 02:15:36,496 p=53462 u=root n=ansible | TASK [Remove all existing containers] *******************************************************************************
+2020-09-02 02:15:36,844 p=53462 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.122438", "end": "2020-09-02 02:15:36.810894", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:15:36.688456", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:15:36,846 p=53462 u=root n=ansible | PLAY RECAP **********************************************************************************************************
+2020-09-02 02:15:36,847 p=53462 u=root n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 02:17:17,462 p=54117 u=root n=ansible | PLAY [Demonstrates building docker image via Playbook] *****************************************
+2020-09-02 02:17:17,482 p=54117 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-02 02:17:18,764 p=54117 u=root n=ansible | ok: [localhost]
+2020-09-02 02:17:18,785 p=54117 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] **************************************
+2020-09-02 02:17:32,340 p=54117 u=root n=ansible | ok: [localhost]
+2020-09-02 02:17:32,363 p=54117 u=root n=ansible | TASK [Install Python Package Installer (pip)] **************************************************
+2020-09-02 02:17:45,501 p=54117 u=root n=ansible | ok: [localhost]
+2020-09-02 02:17:45,516 p=54117 u=root n=ansible | TASK [Install Docker SDK] **********************************************************************
+2020-09-02 02:17:46,258 p=54117 u=root n=ansible | changed: [localhost]
+2020-09-02 02:17:46,280 p=54117 u=root n=ansible | TASK [Remove all existing containers] **********************************************************
+2020-09-02 02:17:46,673 p=54117 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.129724", "end": "2020-09-02 02:17:46.640049", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:17:46.510325", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:17:46,673 p=54117 u=root n=ansible | ...ignoring
+2020-09-02 02:17:46,690 p=54117 u=root n=ansible | TASK [Delete tektutor ubuntu image] ************************************************************
+2020-09-02 02:17:47,083 p=54117 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rmi tektutor/ansible-ubuntu", "delta": "0:00:00.081917", "end": "2020-09-02 02:17:47.011291", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:17:46.929374", "stderr": "Error: No such image: tektutor/ansible-ubuntu", "stderr_lines": ["Error: No such image: tektutor/ansible-ubuntu"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:17:47,084 p=54117 u=root n=ansible | ...ignoring
+2020-09-02 02:17:47,130 p=54117 u=root n=ansible | TASK [Delete tektutor centos image] ************************************************************
+2020-09-02 02:17:47,536 p=54117 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rmi tektutor/ansible-centos", "delta": "0:00:00.065119", "end": "2020-09-02 02:17:47.506351", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:17:47.441232", "stderr": "Error: No such image: tektutor/ansible-centos", "stderr_lines": ["Error: No such image: tektutor/ansible-centos"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:17:47,536 p=54117 u=root n=ansible | ...ignoring
+2020-09-02 02:17:47,558 p=54117 u=root n=ansible | TASK [Build custom ansible ubuntu image] *******************************************************
+2020-09-02 02:17:48,140 p=54117 u=root n=ansible | [DEPRECATION WARNING]: Param 'path' is deprecated. See the module docs for more information. 
+This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2020-09-02 02:17:48,140 p=54117 u=root n=ansible | [DEPRECATION WARNING]: Param 'dockerfile' is deprecated. See the module docs for more 
+information. This feature will be removed in version 2.12. Deprecation warnings can be disabled
+ by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 02:17:48,140 p=54117 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (docker_image) module: image Supported parameters include: api_version, archive_path, build, buildargs, ca_cert, client_cert, client_key, container_limits, debug, docker_host, dockerfile, force, force_absent, force_source, force_tag, http_timeout, load_path, name, nocache, path, pull, push, repository, rm, source, ssl_version, state, tag, timeout, tls, tls_hostname, use_tls, validate_certs"}
+2020-09-02 02:17:48,142 p=54117 u=root n=ansible | PLAY RECAP *************************************************************************************
+2020-09-02 02:17:48,142 p=54117 u=root n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=3   
+2020-09-02 02:18:44,329 p=54550 u=root n=ansible | PLAY [Demonstrates building docker image via Playbook] **************************************************************
+2020-09-02 02:18:44,345 p=54550 u=root n=ansible | TASK [Gathering Facts] **********************************************************************************************
+2020-09-02 02:18:45,747 p=54550 u=root n=ansible | ok: [localhost]
+2020-09-02 02:18:45,771 p=54550 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] ***********************************************************
+2020-09-02 02:18:58,836 p=54550 u=root n=ansible | ok: [localhost]
+2020-09-02 02:18:58,855 p=54550 u=root n=ansible | TASK [Install Python Package Installer (pip)] ***********************************************************************
+2020-09-02 02:19:14,650 p=54550 u=root n=ansible | ok: [localhost]
+2020-09-02 02:19:14,670 p=54550 u=root n=ansible | TASK [Install Docker SDK] *******************************************************************************************
+2020-09-02 02:19:15,410 p=54550 u=root n=ansible | changed: [localhost]
+2020-09-02 02:19:15,429 p=54550 u=root n=ansible | TASK [Remove all existing containers] *******************************************************************************
+2020-09-02 02:19:15,803 p=54550 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.119153", "end": "2020-09-02 02:19:15.775196", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:19:15.656043", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:19:15,804 p=54550 u=root n=ansible | ...ignoring
+2020-09-02 02:19:15,822 p=54550 u=root n=ansible | TASK [Delete tektutor ubuntu image] *********************************************************************************
+2020-09-02 02:19:16,157 p=54550 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rmi tektutor/ansible-ubuntu", "delta": "0:00:00.058954", "end": "2020-09-02 02:19:16.125281", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:19:16.066327", "stderr": "Error: No such image: tektutor/ansible-ubuntu", "stderr_lines": ["Error: No such image: tektutor/ansible-ubuntu"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:19:16,157 p=54550 u=root n=ansible | ...ignoring
+2020-09-02 02:19:16,178 p=54550 u=root n=ansible | TASK [Delete tektutor centos image] *********************************************************************************
+2020-09-02 02:19:16,501 p=54550 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rmi tektutor/ansible-centos", "delta": "0:00:00.061258", "end": "2020-09-02 02:19:16.473077", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:19:16.411819", "stderr": "Error: No such image: tektutor/ansible-centos", "stderr_lines": ["Error: No such image: tektutor/ansible-centos"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:19:16,501 p=54550 u=root n=ansible | ...ignoring
+2020-09-02 02:19:16,518 p=54550 u=root n=ansible | TASK [Build custom ansible ubuntu image] ****************************************************************************
+2020-09-02 02:19:41,694 p=54550 u=root n=ansible | [WARNING]: Please specify build.path instead of path. The path option has been renamed and will be removed in
+Ansible 2.12.
+
+2020-09-02 02:19:41,695 p=54550 u=root n=ansible | [WARNING]: Please specify build.dockerfile instead of dockerfile. The dockerfile option has been renamed and will be
+removed in Ansible 2.12.
+
+2020-09-02 02:19:41,695 p=54550 u=root n=ansible | [WARNING]: The value of the "source" option was determined to be "build". Please set the "source" option explicitly.
+Autodetection will be removed in Ansible 2.12.
+
+2020-09-02 02:19:41,695 p=54550 u=root n=ansible | [DEPRECATION WARNING]: Param 'path' is deprecated. See the module docs for more information. This feature will be 
+removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 02:19:41,695 p=54550 u=root n=ansible | [DEPRECATION WARNING]: Param 'dockerfile' is deprecated. See the module docs for more information. This feature will
+ be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2020-09-02 02:19:41,696 p=54550 u=root n=ansible | changed: [localhost]
+2020-09-02 02:19:41,712 p=54550 u=root n=ansible | TASK [Build custom ansible centos image] ****************************************************************************
+2020-09-02 02:21:46,400 p=54550 u=root n=ansible | changed: [localhost]
+2020-09-02 02:21:46,403 p=54550 u=root n=ansible | PLAY RECAP **********************************************************************************************************
+2020-09-02 02:21:46,403 p=54550 u=root n=ansible | localhost                  : ok=9    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   
+2020-09-02 02:23:09,508 p=59647 u=root n=ansible | PLAY [Demonstrates building docker image via Playbook] **************************************************************
+2020-09-02 02:23:09,520 p=59647 u=root n=ansible | TASK [Gathering Facts] **********************************************************************************************
+2020-09-02 02:23:10,767 p=59647 u=root n=ansible | ok: [localhost]
+2020-09-02 02:23:10,787 p=59647 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] ***********************************************************
+2020-09-02 02:23:24,711 p=59647 u=root n=ansible | ok: [localhost]
+2020-09-02 02:23:24,731 p=59647 u=root n=ansible | TASK [Install Python Package Installer (pip)] ***********************************************************************
+2020-09-02 02:23:44,514 p=59647 u=root n=ansible | ok: [localhost]
+2020-09-02 02:23:44,548 p=59647 u=root n=ansible | TASK [Install Docker SDK] *******************************************************************************************
+2020-09-02 02:23:45,499 p=59647 u=root n=ansible | changed: [localhost]
+2020-09-02 02:23:45,519 p=59647 u=root n=ansible | TASK [Remove all existing containers] *******************************************************************************
+2020-09-02 02:23:45,866 p=59647 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.122050", "end": "2020-09-02 02:23:45.836956", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:23:45.714906", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:23:45,866 p=59647 u=root n=ansible | ...ignoring
+2020-09-02 02:23:45,888 p=59647 u=root n=ansible | TASK [Delete tektutor ubuntu image] *********************************************************************************
+2020-09-02 02:23:46,404 p=59647 u=root n=ansible | changed: [localhost]
+2020-09-02 02:23:46,428 p=59647 u=root n=ansible | TASK [Delete tektutor centos image] *********************************************************************************
+2020-09-02 02:23:46,839 p=59647 u=root n=ansible | changed: [localhost]
+2020-09-02 02:23:46,863 p=59647 u=root n=ansible | TASK [Build custom ansible ubuntu image] ****************************************************************************
+2020-09-02 02:23:47,501 p=59647 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (docker_image) module: build.dockerfile, build.path Supported parameters include: api_version, archive_path, build, buildargs, ca_cert, client_cert, client_key, container_limits, debug, docker_host, dockerfile, force, force_absent, force_source, force_tag, http_timeout, load_path, name, nocache, path, pull, push, repository, rm, source, ssl_version, state, tag, timeout, tls, tls_hostname, use_tls, validate_certs"}
+2020-09-02 02:23:47,504 p=59647 u=root n=ansible | PLAY RECAP **********************************************************************************************************
+2020-09-02 02:23:47,505 p=59647 u=root n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2020-09-02 02:25:25,647 p=60110 u=root n=ansible | PLAY [Demonstrates building docker image via Playbook] **************************************************************
+2020-09-02 02:25:25,663 p=60110 u=root n=ansible | TASK [Gathering Facts] **********************************************************************************************
+2020-09-02 02:25:26,944 p=60110 u=root n=ansible | ok: [localhost]
+2020-09-02 02:25:26,967 p=60110 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] ***********************************************************
+2020-09-02 02:25:41,333 p=60110 u=root n=ansible | ok: [localhost]
+2020-09-02 02:25:41,358 p=60110 u=root n=ansible | TASK [Install Python Package Installer (pip)] ***********************************************************************
+2020-09-02 02:25:54,903 p=60110 u=root n=ansible | ok: [localhost]
+2020-09-02 02:25:54,930 p=60110 u=root n=ansible | TASK [Install Docker SDK] *******************************************************************************************
+2020-09-02 02:25:55,758 p=60110 u=root n=ansible | changed: [localhost]
+2020-09-02 02:25:55,778 p=60110 u=root n=ansible | TASK [Remove all existing containers] *******************************************************************************
+2020-09-02 02:25:56,144 p=60110 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.110043", "end": "2020-09-02 02:25:56.112773", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:25:56.002730", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:25:56,145 p=60110 u=root n=ansible | ...ignoring
+2020-09-02 02:25:56,167 p=60110 u=root n=ansible | TASK [Delete tektutor ubuntu image] *********************************************************************************
+2020-09-02 02:25:56,488 p=60110 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rmi tektutor/ansible-ubuntu", "delta": "0:00:00.061614", "end": "2020-09-02 02:25:56.456761", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:25:56.395147", "stderr": "Error: No such image: tektutor/ansible-ubuntu", "stderr_lines": ["Error: No such image: tektutor/ansible-ubuntu"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:25:56,489 p=60110 u=root n=ansible | ...ignoring
+2020-09-02 02:25:56,507 p=60110 u=root n=ansible | TASK [Delete tektutor centos image] *********************************************************************************
+2020-09-02 02:25:56,890 p=60110 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rmi tektutor/ansible-centos", "delta": "0:00:00.093703", "end": "2020-09-02 02:25:56.855353", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 02:25:56.761650", "stderr": "Error: No such image: tektutor/ansible-centos", "stderr_lines": ["Error: No such image: tektutor/ansible-centos"], "stdout": "", "stdout_lines": []}
+2020-09-02 02:25:56,891 p=60110 u=root n=ansible | ...ignoring
+2020-09-02 02:25:56,913 p=60110 u=root n=ansible | TASK [Build custom ansible ubuntu image] ****************************************************************************
+2020-09-02 02:26:35,226 p=60110 u=root n=ansible | [WARNING]: Please specify build.path instead of path. The path option has been renamed and will be removed in
+Ansible 2.12.
+
+2020-09-02 02:26:35,226 p=60110 u=root n=ansible | [WARNING]: Please specify build.dockerfile instead of dockerfile. The dockerfile option has been renamed and will be
+removed in Ansible 2.12.
+
+2020-09-02 02:26:35,227 p=60110 u=root n=ansible | [WARNING]: The default for build.pull is currently 'yes', but will be changed to 'no' in Ansible 2.12. Please set
+build.pull explicitly to the value you need.
+
+2020-09-02 02:26:35,227 p=60110 u=root n=ansible | [DEPRECATION WARNING]: Param 'path' is deprecated. See the module docs for more information. This feature will be 
+removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 02:26:35,228 p=60110 u=root n=ansible | [DEPRECATION WARNING]: Param 'dockerfile' is deprecated. See the module docs for more information. This feature will
+ be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2020-09-02 02:26:35,228 p=60110 u=root n=ansible | changed: [localhost]
+2020-09-02 02:26:35,249 p=60110 u=root n=ansible | TASK [Build custom ansible centos image] ****************************************************************************
+2020-09-02 02:27:50,519 p=60110 u=root n=ansible | changed: [localhost]
+2020-09-02 02:27:50,522 p=60110 u=root n=ansible | PLAY RECAP **********************************************************************************************************
+2020-09-02 02:27:50,522 p=60110 u=root n=ansible | localhost                  : ok=9    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   

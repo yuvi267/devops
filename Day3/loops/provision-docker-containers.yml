@@ -1,0 +1,43 @@
+- name: Demonstrates how to provision docker container via Playbook
+  hosts: localhost
+  tasks:
+    - name: Install Extra Packages for Enterprise Linux (EPEL)
+      yum: name=epel-release state=latest
+
+    - name: Install Python Package Installer (pip)
+      yum: name=python-pip state=latest
+
+    - name: Install Docker SDK
+      shell: pip install docker-py
+
+    - name: Remove all existing containers
+      shell: docker rm -f $(docker ps -aq)
+      ignore_errors: yes
+
+    - name: Create ubuntu containers
+      docker_container:
+        docker_host: tcp://localhost:4243
+        image: tektutor/ansible-ubuntu
+        name: "ubuntu-{{item}}"
+        hostname: "ubuntu-{{item}}"
+        ports:
+           - "2{{item}}:22"
+           - "8{{item}}:80"
+      with_sequence: start=1   end=2 format="%03d"
+
+    - name: Create centos containers
+      docker_container:
+        docker_host: tcp://localhost:4243
+        image: tektutor/ansible-centos
+        name: "centos-{{item}}"
+        hostname: "centos-{{item}}"
+        ports:
+           - "3{{item}}:22"
+           - "9{{item}}:80"
+      with_sequence: start=1   end=2  format="%03d"
+
+    - name: List all provisioned containers
+      shell: docker ps
+      register: output
+
+    - debug: var=output

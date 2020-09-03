@@ -1,0 +1,305 @@
+2020-09-02 04:47:52,587 p=73296 u=root n=ansible | [DEPRECATION WARNING]: Included file '/root/DevOps/Day3/custom-ansible-role/common-tomcat-
+task.yml' not found, however since this include is not explicitly marked as 'static: yes', we 
+will try and include it dynamically later. In the future, this will be an error unless 'static:
+ no' is used on the include task. If you do not want missing includes to be considered dynamic,
+ use 'static: yes' on the include or set the global ansible.cfg options to make all includes 
+static for tasks and/or handlers. This feature will be removed in version 2.12. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 04:47:52,652 p=73296 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] ***********************************************
+2020-09-02 04:47:52,674 p=73296 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-02 04:47:52,783 p=73296 u=root n=ansible | fatal: [ubuntu1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2001: Connection refused", "unreachable": true}
+2020-09-02 04:47:52,806 p=73296 u=root n=ansible | fatal: [centos1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2003: Connection refused", "unreachable": true}
+2020-09-02 04:47:52,923 p=73296 u=root n=ansible | fatal: [ubuntu2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2002: Connection refused", "unreachable": true}
+2020-09-02 04:47:52,927 p=73296 u=root n=ansible | fatal: [centos2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2004: Connection refused", "unreachable": true}
+2020-09-02 04:47:52,929 p=73296 u=root n=ansible | PLAY RECAP *************************************************************************************
+2020-09-02 04:47:52,929 p=73296 u=root n=ansible | centos1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:47:52,929 p=73296 u=root n=ansible | centos2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:47:52,929 p=73296 u=root n=ansible | ubuntu1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:47:52,929 p=73296 u=root n=ansible | ubuntu2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:51:27,988 p=74582 u=root n=ansible | [DEPRECATION WARNING]: Included file '/root/DevOps/Day3/custom-ansible-role
+/common-tomcat-task.yml' not found, however since this include is not 
+explicitly marked as 'static: yes', we will try and include it dynamically 
+later. In the future, this will be an error unless 'static: no' is used on the 
+include task. If you do not want missing includes to be considered dynamic, use
+ 'static: yes' on the include or set the global ansible.cfg options to make all
+ includes static for tasks and/or handlers. This feature will be removed in 
+version 2.12. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2020-09-02 04:51:28,080 p=74582 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] *******************************
+2020-09-02 04:51:28,103 p=74582 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 04:51:28,216 p=74582 u=root n=ansible | fatal: [centos2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2004: Connection refused", "unreachable": true}
+2020-09-02 04:51:28,225 p=74582 u=root n=ansible | fatal: [ubuntu1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:jn0BrkRrmc6OFCE4R2/yURoaKs6RczuCekgwJ2wjKIE.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:2\r\nECDSA host key for [localhost]:2001 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+2020-09-02 04:51:28,233 p=74582 u=root n=ansible | fatal: [centos1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2003: Connection refused", "unreachable": true}
+2020-09-02 04:51:28,243 p=74582 u=root n=ansible | fatal: [ubuntu2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:jn0BrkRrmc6OFCE4R2/yURoaKs6RczuCekgwJ2wjKIE.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:3\r\nECDSA host key for [localhost]:2002 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+2020-09-02 04:51:28,252 p=74582 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 04:51:28,253 p=74582 u=root n=ansible | centos1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:51:28,253 p=74582 u=root n=ansible | centos2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:51:28,254 p=74582 u=root n=ansible | ubuntu1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:51:28,254 p=74582 u=root n=ansible | ubuntu2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:51:54,002 p=74647 u=root n=ansible | [DEPRECATION WARNING]: Included file '/root/DevOps/Day3/custom-ansible-role/common-tomcat-
+task.yml' not found, however since this include is not explicitly marked as 'static: yes', we 
+will try and include it dynamically later. In the future, this will be an error unless 'static:
+ no' is used on the include task. If you do not want missing includes to be considered dynamic,
+ use 'static: yes' on the include or set the global ansible.cfg options to make all includes 
+static for tasks and/or handlers. This feature will be removed in version 2.12. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 04:51:54,077 p=74647 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] ***********************************************
+2020-09-02 04:51:54,106 p=74647 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-02 04:51:54,218 p=74647 u=root n=ansible | fatal: [ubuntu1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:jn0BrkRrmc6OFCE4R2/yURoaKs6RczuCekgwJ2wjKIE.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:2\r\nECDSA host key for [localhost]:2001 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+2020-09-02 04:51:54,257 p=74647 u=root n=ansible | fatal: [ubuntu2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:jn0BrkRrmc6OFCE4R2/yURoaKs6RczuCekgwJ2wjKIE.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:3\r\nECDSA host key for [localhost]:2002 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+2020-09-02 04:52:11,604 p=74647 u=root n=ansible |  [ERROR]: User interrupted execution
+
+2020-09-02 04:52:22,086 p=74813 u=root n=ansible | [DEPRECATION WARNING]: Included file '/root/DevOps/Day3/custom-ansible-role/common-tomcat-
+task.yml' not found, however since this include is not explicitly marked as 'static: yes', we 
+will try and include it dynamically later. In the future, this will be an error unless 'static:
+ no' is used on the include task. If you do not want missing includes to be considered dynamic,
+ use 'static: yes' on the include or set the global ansible.cfg options to make all includes 
+static for tasks and/or handlers. This feature will be removed in version 2.12. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 04:52:22,162 p=74813 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] ***********************************************
+2020-09-02 04:52:22,185 p=74813 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-02 04:52:26,192 p=74813 u=root n=ansible |  [ERROR]: User interrupted execution
+
+2020-09-02 04:53:02,635 p=74976 u=root n=ansible | [DEPRECATION WARNING]: Included file '/root/DevOps/Day3/custom-ansible-role/common-tomcat-
+task.yml' not found, however since this include is not explicitly marked as 'static: yes', we 
+will try and include it dynamically later. In the future, this will be an error unless 'static:
+ no' is used on the include task. If you do not want missing includes to be considered dynamic,
+ use 'static: yes' on the include or set the global ansible.cfg options to make all includes 
+static for tasks and/or handlers. This feature will be removed in version 2.12. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 04:53:02,716 p=74976 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] ***********************************************
+2020-09-02 04:53:02,738 p=74976 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-02 04:53:04,465 p=74976 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 04:53:04,525 p=74976 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 04:53:16,679 p=74976 u=root n=ansible | ok: [centos1]
+2020-09-02 04:53:16,819 p=74976 u=root n=ansible | ok: [centos2]
+2020-09-02 04:53:16,830 p=74976 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 04:53:17,214 p=74976 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 04:53:17,220 p=74976 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-centos.yml for centos1, centos2
+2020-09-02 04:53:17,238 p=74976 u=root n=ansible | TASK [Install tomcat on Ubuntu ansible node] ***************************************************
+2020-09-02 04:53:42,525 p=74976 u=root n=ansible | [WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+
+2020-09-02 04:53:42,526 p=74976 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 04:53:42,624 p=74976 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 04:53:42,638 p=74976 u=root n=ansible | TASK [tomcat : Fix the metalink issue] *********************************************************
+2020-09-02 04:53:42,849 p=74976 u=root n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2020-09-02 04:53:42,850 p=74976 u=root n=ansible | fatal: [centos1]: FAILED! => {"changed": false, "msg": "Could not find or access 'epel.repo'\nSearched in:\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/files/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/tasks/files/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/tasks/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/files/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/epel.repo on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2020-09-02 04:53:42,901 p=74976 u=root n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2020-09-02 04:53:42,902 p=74976 u=root n=ansible | fatal: [centos2]: FAILED! => {"changed": false, "msg": "Could not find or access 'epel.repo'\nSearched in:\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/files/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/tasks/files/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/tomcat/tasks/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/files/epel.repo\n\t/root/DevOps/Day3/custom-ansible-role/epel.repo on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2020-09-02 04:53:42,924 p=74976 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 04:53:43,068 p=74976 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 04:53:43,139 p=74976 u=root n=ansible | fatal: [ubuntu1]: FAILED! => {"reason": "Could not find or access '/root/DevOps/Day3/custom-ansible-role/common-tomcat-task.yml' on the Ansible Controller."}
+2020-09-02 04:53:43,140 p=74976 u=root n=ansible | fatal: [ubuntu2]: FAILED! => {"reason": "Could not find or access '/root/DevOps/Day3/custom-ansible-role/common-tomcat-task.yml' on the Ansible Controller."}
+2020-09-02 04:53:43,142 p=74976 u=root n=ansible | PLAY RECAP *************************************************************************************
+2020-09-02 04:53:43,143 p=74976 u=root n=ansible | centos1                    : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:53:43,143 p=74976 u=root n=ansible | centos2                    : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:53:43,143 p=74976 u=root n=ansible | ubuntu1                    : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:53:43,143 p=74976 u=root n=ansible | ubuntu2                    : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:55:47,279 p=77976 u=root n=ansible | [DEPRECATION WARNING]: Included file '/root/DevOps/Day3/custom-ansible-role/common-tomcat-
+task.yml' not found, however since this include is not explicitly marked as 'static: yes', we 
+will try and include it dynamically later. In the future, this will be an error unless 'static:
+ no' is used on the include task. If you do not want missing includes to be considered dynamic,
+ use 'static: yes' on the include or set the global ansible.cfg options to make all includes 
+static for tasks and/or handlers. This feature will be removed in version 2.12. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 04:55:47,360 p=77976 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] ***********************************************
+2020-09-02 04:55:47,386 p=77976 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-02 04:55:48,978 p=77976 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 04:55:48,994 p=77976 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 04:56:05,322 p=77976 u=root n=ansible | ok: [centos2]
+2020-09-02 04:56:05,442 p=77976 u=root n=ansible | ok: [centos1]
+2020-09-02 04:56:05,455 p=77976 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 04:56:05,890 p=77976 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 04:56:05,894 p=77976 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-centos.yml for centos1, centos2
+2020-09-02 04:56:05,912 p=77976 u=root n=ansible | TASK [Install tomcat on Ubuntu ansible node] ***************************************************
+2020-09-02 04:56:16,944 p=77976 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 04:56:22,109 p=77976 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 04:56:22,127 p=77976 u=root n=ansible | TASK [tomcat : Fix the metalink issue] *********************************************************
+2020-09-02 04:56:24,835 p=77976 u=root n=ansible | changed: [centos1]
+2020-09-02 04:56:24,837 p=77976 u=root n=ansible | changed: [centos2]
+2020-09-02 04:56:24,856 p=77976 u=root n=ansible | TASK [tomcat : Install Extra Packages for Enterprise Linux] ************************************
+2020-09-02 04:56:54,963 p=77976 u=root n=ansible | changed: [centos1]
+2020-09-02 04:56:56,390 p=77976 u=root n=ansible | changed: [centos2]
+2020-09-02 04:56:56,409 p=77976 u=root n=ansible | TASK [Install tomcat on CentOS ansible node] ***************************************************
+2020-09-02 04:57:10,854 p=77976 u=root n=ansible | changed: [centos2]
+2020-09-02 04:57:11,516 p=77976 u=root n=ansible | changed: [centos1]
+2020-09-02 04:57:11,528 p=77976 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 04:57:11,824 p=77976 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 04:57:12,013 p=77976 u=root n=ansible | fatal: [ubuntu1]: FAILED! => {"reason": "Could not find or access '/root/DevOps/Day3/custom-ansible-role/common-tomcat-task.yml' on the Ansible Controller."}
+2020-09-02 04:57:12,014 p=77976 u=root n=ansible | fatal: [ubuntu2]: FAILED! => {"reason": "Could not find or access '/root/DevOps/Day3/custom-ansible-role/common-tomcat-task.yml' on the Ansible Controller."}
+2020-09-02 04:57:12,015 p=77976 u=root n=ansible | fatal: [centos1]: FAILED! => {"reason": "Could not find or access '/root/DevOps/Day3/custom-ansible-role/common-tomcat-task.yml' on the Ansible Controller."}
+2020-09-02 04:57:12,015 p=77976 u=root n=ansible | fatal: [centos2]: FAILED! => {"reason": "Could not find or access '/root/DevOps/Day3/custom-ansible-role/common-tomcat-task.yml' on the Ansible Controller."}
+2020-09-02 04:57:12,018 p=77976 u=root n=ansible | PLAY RECAP *************************************************************************************
+2020-09-02 04:57:12,019 p=77976 u=root n=ansible | centos1                    : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:57:12,019 p=77976 u=root n=ansible | centos2                    : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:57:12,019 p=77976 u=root n=ansible | ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:57:12,019 p=77976 u=root n=ansible | ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:00:33,592 p=79327 u=root n=ansible | ubuntu1 | CHANGED | rc=0 >>
+172.17.0.2
+
+2020-09-02 05:19:24,075 p=80105 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] ***********************************************
+2020-09-02 05:19:24,088 p=80105 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-02 05:19:25,631 p=80105 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:19:25,638 p=80105 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:19:37,470 p=80105 u=root n=ansible | ok: [centos2]
+2020-09-02 05:19:37,572 p=80105 u=root n=ansible | ok: [centos1]
+2020-09-02 05:19:37,585 p=80105 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 05:19:37,924 p=80105 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 05:19:37,930 p=80105 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-centos.yml for centos1, centos2
+2020-09-02 05:19:37,959 p=80105 u=root n=ansible | TASK [Install tomcat on Ubuntu ansible node] ***************************************************
+2020-09-02 05:20:04,833 p=80105 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:20:05,191 p=80105 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:20:05,211 p=80105 u=root n=ansible | TASK [tomcat : Fix the metalink issue] *********************************************************
+2020-09-02 05:20:06,464 p=80105 u=root n=ansible | ok: [centos1]
+2020-09-02 05:20:06,492 p=80105 u=root n=ansible | ok: [centos2]
+2020-09-02 05:20:06,522 p=80105 u=root n=ansible | TASK [tomcat : Install Extra Packages for Enterprise Linux] ************************************
+2020-09-02 05:20:09,319 p=80105 u=root n=ansible | ok: [centos1]
+2020-09-02 05:20:09,320 p=80105 u=root n=ansible | ok: [centos2]
+2020-09-02 05:20:09,337 p=80105 u=root n=ansible | TASK [Install tomcat on CentOS ansible node] ***************************************************
+2020-09-02 05:20:11,593 p=80105 u=root n=ansible | ok: [centos2]
+2020-09-02 05:20:11,604 p=80105 u=root n=ansible | ok: [centos1]
+2020-09-02 05:20:11,622 p=80105 u=root n=ansible | TASK [tomcat : include] ************************************************************************
+2020-09-02 05:20:11,871 p=80105 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/configure-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 05:20:11,873 p=80105 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/configure-tomcat-centos.yml for centos1, centos2
+2020-09-02 05:20:11,899 p=80105 u=root n=ansible | TASK [Configure tomcat web root folder in Ubuntu node] *****************************************
+2020-09-02 05:20:12,978 p=80105 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:20:12,982 p=80105 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:20:12,998 p=80105 u=root n=ansible | TASK [tomcat : Grant permission to custom web root folder] *************************************
+2020-09-02 05:20:13,801 p=80105 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:20:13,816 p=80105 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:20:13,834 p=80105 u=root n=ansible | TASK [tomcat : Configure web root folder and grant permission in CentoS node] ******************
+2020-09-02 05:20:16,344 p=80105 u=root n=ansible | changed: [centos1]
+2020-09-02 05:20:16,363 p=80105 u=root n=ansible | changed: [centos2]
+2020-09-02 05:20:16,382 p=80105 u=root n=ansible | TASK [tomcat : Create the custom web root foler] ***********************************************
+2020-09-02 05:20:17,100 p=80105 u=root n=ansible | changed: [centos1]
+2020-09-02 05:20:17,169 p=80105 u=root n=ansible | changed: [centos2]
+2020-09-02 05:20:17,202 p=80105 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:20:17,206 p=80105 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:20:17,231 p=80105 u=root n=ansible | TASK [Deploy custom html page in tomcat server] ************************************************
+2020-09-02 05:20:17,553 p=80105 u=root n=ansible | fatal: [ubuntu1]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'ip_addr' is undefined"}
+2020-09-02 05:20:17,576 p=80105 u=root n=ansible | fatal: [ubuntu2]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'ip_addr' is undefined"}
+2020-09-02 05:20:17,604 p=80105 u=root n=ansible | fatal: [centos1]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'ip_addr' is undefined"}
+2020-09-02 05:20:17,646 p=80105 u=root n=ansible | fatal: [centos2]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'ip_addr' is undefined"}
+2020-09-02 05:20:17,649 p=80105 u=root n=ansible | RUNNING HANDLER [Restart the tomcat web server in Ubuntu] **************************************
+2020-09-02 05:20:17,650 p=80105 u=root n=ansible | RUNNING HANDLER [Restart the tomcat web server in CentOS] **************************************
+2020-09-02 05:20:17,656 p=80105 u=root n=ansible | PLAY RECAP *************************************************************************************
+2020-09-02 05:20:17,657 p=80105 u=root n=ansible | centos1                    : ok=8    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:20:17,657 p=80105 u=root n=ansible | centos2                    : ok=8    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:20:17,657 p=80105 u=root n=ansible | ubuntu1                    : ok=7    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:20:17,657 p=80105 u=root n=ansible | ubuntu2                    : ok=7    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:21:29,335 p=81662 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] *******************************
+2020-09-02 05:21:29,347 p=81662 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 05:21:30,733 p=81662 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:21:30,736 p=81662 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:21:48,462 p=81662 u=root n=ansible | ok: [centos1]
+2020-09-02 05:21:48,589 p=81662 u=root n=ansible | ok: [centos2]
+2020-09-02 05:21:48,610 p=81662 u=root n=ansible | TASK [tomcat : include] ********************************************************
+2020-09-02 05:21:48,958 p=81662 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 05:21:48,961 p=81662 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-centos.yml for centos1, centos2
+2020-09-02 05:21:48,979 p=81662 u=root n=ansible | TASK [Install tomcat on Ubuntu ansible node] ***********************************
+2020-09-02 05:22:09,558 p=81662 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:22:14,473 p=81662 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:22:14,489 p=81662 u=root n=ansible | TASK [tomcat : Fix the metalink issue] *****************************************
+2020-09-02 05:22:15,478 p=81662 u=root n=ansible | ok: [centos1]
+2020-09-02 05:22:15,479 p=81662 u=root n=ansible | ok: [centos2]
+2020-09-02 05:22:15,498 p=81662 u=root n=ansible | TASK [tomcat : Install Extra Packages for Enterprise Linux] ********************
+2020-09-02 05:22:17,930 p=81662 u=root n=ansible | ok: [centos2]
+2020-09-02 05:22:17,931 p=81662 u=root n=ansible | ok: [centos1]
+2020-09-02 05:22:17,949 p=81662 u=root n=ansible | TASK [Install tomcat on CentOS ansible node] ***********************************
+2020-09-02 05:22:20,076 p=81662 u=root n=ansible | ok: [centos1]
+2020-09-02 05:22:20,125 p=81662 u=root n=ansible | ok: [centos2]
+2020-09-02 05:22:20,144 p=81662 u=root n=ansible | TASK [tomcat : include] ********************************************************
+2020-09-02 05:22:20,420 p=81662 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/configure-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 05:22:20,423 p=81662 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/configure-tomcat-centos.yml for centos1, centos2
+2020-09-02 05:22:20,458 p=81662 u=root n=ansible | TASK [Configure tomcat web root folder in Ubuntu node] *************************
+2020-09-02 05:22:21,283 p=81662 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:22:21,301 p=81662 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:22:21,320 p=81662 u=root n=ansible | TASK [tomcat : Grant permission to custom web root folder] *********************
+2020-09-02 05:22:22,174 p=81662 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:22:22,181 p=81662 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:22:22,201 p=81662 u=root n=ansible | TASK [tomcat : Configure web root folder and grant permission in CentoS node] ***
+2020-09-02 05:22:22,818 p=81662 u=root n=ansible | ok: [centos1]
+2020-09-02 05:22:22,847 p=81662 u=root n=ansible | ok: [centos2]
+2020-09-02 05:22:22,860 p=81662 u=root n=ansible | TASK [tomcat : Create the custom web root foler] *******************************
+2020-09-02 05:22:23,473 p=81662 u=root n=ansible | ok: [centos2]
+2020-09-02 05:22:23,483 p=81662 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:22:23,486 p=81662 u=root n=ansible | ok: [centos1]
+2020-09-02 05:22:23,496 p=81662 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:22:23,515 p=81662 u=root n=ansible | TASK [tomcat : Retrieve IP address of ansible node] ****************************
+2020-09-02 05:22:24,331 p=81662 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:22:24,332 p=81662 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:22:25,143 p=81662 u=root n=ansible | changed: [centos1]
+2020-09-02 05:22:25,144 p=81662 u=root n=ansible | changed: [centos2]
+2020-09-02 05:22:25,156 p=81662 u=root n=ansible | TASK [Deploy custom html page in tomcat server] ********************************
+2020-09-02 05:22:26,581 p=81662 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:22:26,651 p=81662 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:22:28,142 p=81662 u=root n=ansible | changed: [centos1]
+2020-09-02 05:22:28,250 p=81662 u=root n=ansible | changed: [centos2]
+2020-09-02 05:22:28,254 p=81662 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 05:22:28,255 p=81662 u=root n=ansible | centos1                    : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:22:28,255 p=81662 u=root n=ansible | centos2                    : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:22:28,256 p=81662 u=root n=ansible | ubuntu1                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:22:28,256 p=81662 u=root n=ansible | ubuntu2                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:24:29,045 p=83421 u=root n=ansible | PLAY [Demonstrates invoking custom ansible role] **********************************************
+2020-09-02 05:24:29,059 p=83421 u=root n=ansible | TASK [Gathering Facts] ************************************************************************
+2020-09-02 05:24:30,598 p=83421 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:24:31,636 p=83421 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:24:42,652 p=83421 u=root n=ansible | ok: [centos2]
+2020-09-02 05:24:42,782 p=83421 u=root n=ansible | ok: [centos1]
+2020-09-02 05:24:42,794 p=83421 u=root n=ansible | TASK [tomcat : include] ***********************************************************************
+2020-09-02 05:24:43,123 p=83421 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 05:24:43,126 p=83421 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/install-tomcat-centos.yml for centos1, centos2
+2020-09-02 05:24:43,148 p=83421 u=root n=ansible | TASK [Install tomcat on Ubuntu ansible node] **************************************************
+2020-09-02 05:25:08,446 p=83421 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:25:13,334 p=83421 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:25:13,346 p=83421 u=root n=ansible | TASK [tomcat : Fix the metalink issue] ********************************************************
+2020-09-02 05:25:14,237 p=83421 u=root n=ansible | ok: [centos2]
+2020-09-02 05:25:14,242 p=83421 u=root n=ansible | ok: [centos1]
+2020-09-02 05:25:14,257 p=83421 u=root n=ansible | TASK [tomcat : Install Extra Packages for Enterprise Linux] ***********************************
+2020-09-02 05:25:16,465 p=83421 u=root n=ansible | ok: [centos2]
+2020-09-02 05:25:16,477 p=83421 u=root n=ansible | ok: [centos1]
+2020-09-02 05:25:16,496 p=83421 u=root n=ansible | TASK [Install tomcat on CentOS ansible node] **************************************************
+2020-09-02 05:25:18,391 p=83421 u=root n=ansible | ok: [centos1]
+2020-09-02 05:25:18,434 p=83421 u=root n=ansible | ok: [centos2]
+2020-09-02 05:25:18,449 p=83421 u=root n=ansible | TASK [tomcat : include] ***********************************************************************
+2020-09-02 05:25:18,673 p=83421 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/configure-tomcat-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-02 05:25:18,675 p=83421 u=root n=ansible | included: /root/DevOps/Day3/custom-ansible-role/tomcat/tasks/configure-tomcat-centos.yml for centos1, centos2
+2020-09-02 05:25:18,705 p=83421 u=root n=ansible | TASK [Configure tomcat web root folder in Ubuntu node] ****************************************
+2020-09-02 05:25:19,704 p=83421 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:25:19,722 p=83421 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:25:19,734 p=83421 u=root n=ansible | TASK [tomcat : Grant permission to custom web root folder] ************************************
+2020-09-02 05:25:20,423 p=83421 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:25:20,450 p=83421 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:25:20,467 p=83421 u=root n=ansible | TASK [tomcat : Configure web root folder and grant permission in CentoS node] *****************
+2020-09-02 05:25:22,771 p=83421 u=root n=ansible | changed: [centos1]
+2020-09-02 05:25:22,835 p=83421 u=root n=ansible | changed: [centos2]
+2020-09-02 05:25:22,849 p=83421 u=root n=ansible | TASK [tomcat : Create the custom web root foler] **********************************************
+2020-09-02 05:25:23,380 p=83421 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:25:23,384 p=83421 u=root n=ansible | ok: [centos1]
+2020-09-02 05:25:23,397 p=83421 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:25:23,400 p=83421 u=root n=ansible | ok: [centos2]
+2020-09-02 05:25:23,418 p=83421 u=root n=ansible | TASK [tomcat : Retrieve IP address of ansible node] *******************************************
+2020-09-02 05:25:24,150 p=83421 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:25:24,164 p=83421 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:25:24,916 p=83421 u=root n=ansible | changed: [centos1]
+2020-09-02 05:25:24,988 p=83421 u=root n=ansible | changed: [centos2]
+2020-09-02 05:25:25,015 p=83421 u=root n=ansible | TASK [Deploy custom html page in tomcat server] ***********************************************
+2020-09-02 05:25:26,086 p=83421 u=root n=ansible | ok: [centos2]
+2020-09-02 05:25:26,106 p=83421 u=root n=ansible | ok: [centos1]
+2020-09-02 05:25:26,155 p=83421 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 05:25:26,276 p=83421 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 05:25:26,277 p=83421 u=root n=ansible | RUNNING HANDLER [Restart the tomcat web server in Ubuntu] *************************************
+2020-09-02 05:25:26,832 p=83421 u=root n=ansible | [WARNING]: Consider using the service module rather than running 'service'.  If you need to
+use command because service is insufficient you can add 'warn: false' to this command task or
+set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-09-02 05:25:26,832 p=83421 u=root n=ansible | changed: [ubuntu2]
+2020-09-02 05:25:27,839 p=83421 u=root n=ansible | changed: [ubuntu1]
+2020-09-02 05:25:27,840 p=83421 u=root n=ansible | RUNNING HANDLER [Restart the tomcat web server in CentOS] *************************************
+2020-09-02 05:25:29,059 p=83421 u=root n=ansible | changed: [centos2]
+2020-09-02 05:25:29,064 p=83421 u=root n=ansible | changed: [centos1]
+2020-09-02 05:25:29,068 p=83421 u=root n=ansible | PLAY RECAP ************************************************************************************
+2020-09-02 05:25:29,068 p=83421 u=root n=ansible | centos1                    : ok=11   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:25:29,068 p=83421 u=root n=ansible | centos2                    : ok=11   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:25:29,068 p=83421 u=root n=ansible | ubuntu1                    : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 05:25:29,069 p=83421 u=root n=ansible | ubuntu2                    : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

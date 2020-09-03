@@ -1,0 +1,4 @@
+- name: Demonstrates invoking custom ansible role
+  hosts: all
+  roles:
+    - tomcat

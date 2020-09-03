@@ -1,0 +1,714 @@
+2020-09-02 01:41:15,505 p=47225 u=root n=ansible | PLAY [Demonstrates use of list and navigating/accessing list elements] *********************************************
+2020-09-02 01:41:15,524 p=47225 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2020-09-02 01:41:17,561 p=47225 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 01:41:17,590 p=47225 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 01:41:17,609 p=47225 u=root n=ansible | TASK [Install software utilities] **********************************************************************************
+2020-09-02 01:41:17,733 p=47371 u=root n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of 
+using a loop to supply multiple items and specifying `name: "{{item}}"`, please use `name: '{{software_tools}}'` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2020-09-02 01:41:17,745 p=47372 u=root n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of 
+using a loop to supply multiple items and specifying `name: "{{item}}"`, please use `name: '{{software_tools}}'` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2020-09-02 01:41:41,974 p=47225 u=root n=ansible | changed: [ubuntu1] => (item=[u'vim', u'tree', u'net-tools', u'iputils-ping'])
+2020-09-02 01:41:41,978 p=47225 u=root n=ansible | changed: [ubuntu2] => (item=[u'vim', u'tree', u'net-tools', u'iputils-ping'])
+2020-09-02 01:41:41,981 p=47225 u=root n=ansible | [WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+
+2020-09-02 01:41:41,988 p=47225 u=root n=ansible | PLAY RECAP *********************************************************************************************************
+2020-09-02 01:41:41,989 p=47225 u=root n=ansible | ubuntu1                    : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 01:41:41,989 p=47225 u=root n=ansible | ubuntu2                    : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 01:43:49,295 p=48844 u=root n=ansible | PLAY [Demonstrates use of list and navigating/accessing list elements] *********
+2020-09-02 01:43:49,305 p=48844 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 01:43:50,647 p=48844 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 01:43:50,652 p=48844 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 01:43:50,663 p=48844 u=root n=ansible | TASK [Install software utilities] **********************************************
+2020-09-02 01:43:50,728 p=48998 u=root n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via 
+squash_actions is deprecated. Instead of using a loop to supply multiple items 
+and specifying `name: "{{item}}"`, please use `name: '{{software_tools}}'` and 
+remove the loop. This feature will be removed in version 2.11. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 01:43:50,747 p=48999 u=root n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via 
+squash_actions is deprecated. Instead of using a loop to supply multiple items 
+and specifying `name: "{{item}}"`, please use `name: '{{software_tools}}'` and 
+remove the loop. This feature will be removed in version 2.11. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-09-02 01:43:57,055 p=48844 u=root n=ansible | ok: [ubuntu1] => (item=[u'vim', u'tree', u'net-tools', u'iputils-ping'])
+2020-09-02 01:43:57,132 p=48844 u=root n=ansible | ok: [ubuntu2] => (item=[u'vim', u'tree', u'net-tools', u'iputils-ping'])
+2020-09-02 01:43:57,137 p=48844 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 01:43:57,137 p=48844 u=root n=ansible | ubuntu1                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 01:43:57,137 p=48844 u=root n=ansible | ubuntu2                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 01:44:27,372 p=49466 u=root n=ansible | PLAY [Demonstrates use of list and navigating/accessing list elements] *********
+2020-09-02 01:44:27,382 p=49466 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 01:44:28,526 p=49466 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 01:44:29,547 p=49466 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 01:44:29,558 p=49466 u=root n=ansible | TASK [Install software utilities] **********************************************
+2020-09-02 01:44:35,313 p=49466 u=root n=ansible | ok: [ubuntu2]
+2020-09-02 01:44:35,336 p=49466 u=root n=ansible | ok: [ubuntu1]
+2020-09-02 01:44:35,340 p=49466 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 01:44:35,341 p=49466 u=root n=ansible | ubuntu1                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 01:44:35,341 p=49466 u=root n=ansible | ubuntu2                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 01:49:23,593 p=50194 u=root n=ansible | PLAY [Demonstrates practical use of dictionary in playbook] ********************
+2020-09-02 01:49:23,602 p=50194 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 01:49:25,932 p=50194 u=root n=ansible | ok: [localhost]
+2020-09-02 01:49:26,004 p=50194 u=root n=ansible | TASK [debug] *******************************************************************
+2020-09-02 01:49:26,098 p=50194 u=root n=ansible | failed: [localhost] (item={u'key': u'M2_HOME', u'value': u'/usr/share/maven'}) => {"msg": "Invalid options for debug: message"}
+2020-09-02 01:49:26,107 p=50194 u=root n=ansible | failed: [localhost] (item={u'key': u'JAVA_HOME', u'value': u'/usr/lib/java/jdk8'}) => {"msg": "Invalid options for debug: message"}
+2020-09-02 01:49:26,108 p=50194 u=root n=ansible | fatal: [localhost]: FAILED! => {"msg": "All items completed"}
+2020-09-02 01:49:26,110 p=50194 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 01:49:26,111 p=50194 u=root n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 01:49:46,626 p=50440 u=root n=ansible | PLAY [Demonstrates practical use of dictionary in playbook] ********************
+2020-09-02 01:49:46,638 p=50440 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 01:49:49,670 p=50440 u=root n=ansible | ok: [localhost]
+2020-09-02 01:49:49,752 p=50440 u=root n=ansible | TASK [debug] *******************************************************************
+2020-09-02 01:49:49,868 p=50440 u=root n=ansible | ok: [localhost] => (item={u'key': u'M2_HOME', u'value': u'/usr/share/maven'}) => {
+    "msg": "M2_HOME --> /usr/share/maven"
+}
+2020-09-02 01:49:49,878 p=50440 u=root n=ansible | ok: [localhost] => (item={u'key': u'JAVA_HOME', u'value': u'/usr/lib/java/jdk8'}) => {
+    "msg": "JAVA_HOME --> /usr/lib/java/jdk8"
+}
+2020-09-02 01:49:49,884 p=50440 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 01:49:49,885 p=50440 u=root n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:48:57,956 p=73387 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] *************
+2020-09-02 04:48:57,968 p=73387 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 04:48:59,385 p=73387 u=root n=ansible | ok: [localhost]
+2020-09-02 04:48:59,414 p=73387 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] **********************
+2020-09-02 04:49:16,389 p=73387 u=root n=ansible | ok: [localhost]
+2020-09-02 04:49:16,411 p=73387 u=root n=ansible | TASK [Install Python Package Installer (pip)] **********************************
+2020-09-02 04:49:42,405 p=73387 u=root n=ansible | ok: [localhost]
+2020-09-02 04:49:42,431 p=73387 u=root n=ansible | TASK [Install Docker SDK] ******************************************************
+2020-09-02 04:49:43,204 p=73387 u=root n=ansible | changed: [localhost]
+2020-09-02 04:49:43,223 p=73387 u=root n=ansible | TASK [Remove all existing containers] ******************************************
+2020-09-02 04:49:43,617 p=73387 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.123094", "end": "2020-09-02 04:49:43.583853", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 04:49:43.460759", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 04:49:43,619 p=73387 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 04:49:43,619 p=73387 u=root n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-02 04:50:17,573 p=73739 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] *************
+2020-09-02 04:50:17,584 p=73739 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2020-09-02 04:50:18,813 p=73739 u=root n=ansible | ok: [localhost]
+2020-09-02 04:50:18,837 p=73739 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] **********************
+2020-09-02 04:50:32,277 p=73739 u=root n=ansible | ok: [localhost]
+2020-09-02 04:50:32,297 p=73739 u=root n=ansible | TASK [Install Python Package Installer (pip)] **********************************
+2020-09-02 04:50:45,479 p=73739 u=root n=ansible | ok: [localhost]
+2020-09-02 04:50:45,500 p=73739 u=root n=ansible | TASK [Install Docker SDK] ******************************************************
+2020-09-02 04:50:46,305 p=73739 u=root n=ansible | changed: [localhost]
+2020-09-02 04:50:46,324 p=73739 u=root n=ansible | TASK [Remove all existing containers] ******************************************
+2020-09-02 04:50:46,710 p=73739 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.121949", "end": "2020-09-02 04:50:46.675024", "msg": "non-zero return code", "rc": 1, "start": "2020-09-02 04:50:46.553075", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-02 04:50:46,711 p=73739 u=root n=ansible | ...ignoring
+2020-09-02 04:50:46,739 p=73739 u=root n=ansible | TASK [Create ubuntu containers] ************************************************
+2020-09-02 04:50:48,112 p=73739 u=root n=ansible | changed: [localhost] => (item=001)
+2020-09-02 04:50:48,970 p=73739 u=root n=ansible | changed: [localhost] => (item=002)
+2020-09-02 04:50:48,995 p=73739 u=root n=ansible | TASK [Create centos containers] ************************************************
+2020-09-02 04:50:49,879 p=73739 u=root n=ansible | changed: [localhost] => (item=001)
+2020-09-02 04:50:50,747 p=73739 u=root n=ansible | changed: [localhost] => (item=002)
+2020-09-02 04:50:50,784 p=73739 u=root n=ansible | TASK [List all provisioned containers] *****************************************
+2020-09-02 04:50:51,115 p=73739 u=root n=ansible | changed: [localhost]
+2020-09-02 04:50:51,143 p=73739 u=root n=ansible | TASK [debug] *******************************************************************
+2020-09-02 04:50:51,243 p=73739 u=root n=ansible | ok: [localhost] => {
+    "output": {
+        "changed": true, 
+        "cmd": "docker ps", 
+        "delta": "0:00:00.069412", 
+        "end": "2020-09-02 04:50:51.082776", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2020-09-02 04:50:51.013364", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "CONTAINER ID        IMAGE                     COMMAND               CREATED             STATUS                  PORTS                                        NAMES\n5ea9e23c3e70        tektutor/ansible-centos   \"/usr/sbin/sshd -D\"   1 second ago        Up Less than a second   0.0.0.0:3002->22/tcp, 0.0.0.0:9002->80/tcp   centos-002\na85a8f8d7b89        tektutor/ansible-centos   \"/usr/sbin/sshd -D\"   2 seconds ago       Up 1 second             0.0.0.0:3001->22/tcp, 0.0.0.0:9001->80/tcp   centos-001\n8418a7fd9d9f        tektutor/ansible-ubuntu   \"/usr/sbin/sshd -D\"   3 seconds ago       Up 2 seconds            0.0.0.0:2002->22/tcp, 0.0.0.0:8002->80/tcp   ubuntu-002\n72ab97f5e4fc        tektutor/ansible-ubuntu   \"/usr/sbin/sshd -D\"   4 seconds ago       Up 3 seconds            0.0.0.0:2001->22/tcp, 0.0.0.0:8001->80/tcp   ubuntu-001", 
+        "stdout_lines": [
+            "CONTAINER ID        IMAGE                     COMMAND               CREATED             STATUS                  PORTS                                        NAMES", 
+            "5ea9e23c3e70        tektutor/ansible-centos   \"/usr/sbin/sshd -D\"   1 second ago        Up Less than a second   0.0.0.0:3002->22/tcp, 0.0.0.0:9002->80/tcp   centos-002", 
+            "a85a8f8d7b89        tektutor/ansible-centos   \"/usr/sbin/sshd -D\"   2 seconds ago       Up 1 second             0.0.0.0:3001->22/tcp, 0.0.0.0:9001->80/tcp   centos-001", 
+            "8418a7fd9d9f        tektutor/ansible-ubuntu   \"/usr/sbin/sshd -D\"   3 seconds ago       Up 2 seconds            0.0.0.0:2002->22/tcp, 0.0.0.0:8002->80/tcp   ubuntu-002", 
+            "72ab97f5e4fc        tektutor/ansible-ubuntu   \"/usr/sbin/sshd -D\"   4 seconds ago       Up 3 seconds            0.0.0.0:2001->22/tcp, 0.0.0.0:8001->80/tcp   ubuntu-001"
+        ]
+    }
+}
+2020-09-02 04:50:51,247 p=73739 u=root n=ansible | PLAY RECAP *********************************************************************
+2020-09-02 04:50:51,248 p=73739 u=root n=ansible | localhost                  : ok=9    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2020-09-03 11:24:50,376 p=26816 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] **********************
+2020-09-03 11:24:50,383 p=26816 u=root n=ansible | TASK [Gathering Facts] ******************************************************************
+2020-09-03 11:24:51,296 p=26816 u=root n=ansible | ok: [localhost]
+2020-09-03 11:24:51,314 p=26816 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *******************************
+2020-09-03 11:25:11,958 p=26816 u=root n=ansible | ok: [localhost]
+2020-09-03 11:25:11,974 p=26816 u=root n=ansible | TASK [Install Python Package Installer (pip)] *******************************************
+2020-09-03 11:25:22,157 p=26816 u=root n=ansible | ok: [localhost]
+2020-09-03 11:25:22,175 p=26816 u=root n=ansible | TASK [Install Docker SDK] ***************************************************************
+2020-09-03 11:25:22,766 p=26816 u=root n=ansible | changed: [localhost]
+2020-09-03 11:25:22,783 p=26816 u=root n=ansible | TASK [Remove all existing containers] ***************************************************
+2020-09-03 11:25:23,368 p=26816 u=root n=ansible | changed: [localhost]
+2020-09-03 11:25:23,385 p=26816 u=root n=ansible | TASK [Create ubuntu containers] *********************************************************
+2020-09-03 11:25:23,931 p=26816 u=root n=ansible | failed: [localhost] (item=001) => {"ansible_loop_var": "item", "changed": false, "item": "001", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fec069c25d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:25:24,211 p=26816 u=root n=ansible | failed: [localhost] (item=002) => {"ansible_loop_var": "item", "changed": false, "item": "002", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcd9227d5d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:25:24,213 p=26816 u=root n=ansible | PLAY RECAP ******************************************************************************
+2020-09-03 11:25:24,213 p=26816 u=root n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-09-03 11:26:51,793 p=27294 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] **********************
+2020-09-03 11:26:51,800 p=27294 u=root n=ansible | TASK [Gathering Facts] ******************************************************************
+2020-09-03 11:26:52,699 p=27294 u=root n=ansible | ok: [localhost]
+2020-09-03 11:26:52,715 p=27294 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *******************************
+2020-09-03 11:27:08,249 p=27294 u=root n=ansible | ok: [localhost]
+2020-09-03 11:27:08,263 p=27294 u=root n=ansible | TASK [Install Python Package Installer (pip)] *******************************************
+2020-09-03 11:27:17,441 p=27294 u=root n=ansible | ok: [localhost]
+2020-09-03 11:27:17,456 p=27294 u=root n=ansible | TASK [Install Docker SDK] ***************************************************************
+2020-09-03 11:27:18,016 p=27294 u=root n=ansible | changed: [localhost]
+2020-09-03 11:27:18,031 p=27294 u=root n=ansible | TASK [Remove all existing containers] ***************************************************
+2020-09-03 11:27:18,273 p=27294 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.072058", "end": "2020-09-03 11:27:18.257395", "msg": "non-zero return code", "rc": 1, "start": "2020-09-03 11:27:18.185337", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-03 11:27:18,274 p=27294 u=root n=ansible | ...ignoring
+2020-09-03 11:27:18,289 p=27294 u=root n=ansible | TASK [Create ubuntu containers] *********************************************************
+2020-09-03 11:27:18,801 p=27294 u=root n=ansible | failed: [localhost] (item=001) => {"ansible_loop_var": "item", "changed": false, "item": "001", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f09b0d565d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:27:19,052 p=27294 u=root n=ansible | failed: [localhost] (item=002) => {"ansible_loop_var": "item", "changed": false, "item": "002", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe32d5c35d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:27:19,054 p=27294 u=root n=ansible | PLAY RECAP ******************************************************************************
+2020-09-03 11:27:19,054 p=27294 u=root n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2020-09-03 11:30:46,217 p=27800 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] **********************
+2020-09-03 11:30:46,224 p=27800 u=root n=ansible | TASK [Gathering Facts] ******************************************************************
+2020-09-03 11:30:47,143 p=27800 u=root n=ansible | ok: [localhost]
+2020-09-03 11:30:47,159 p=27800 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *******************************
+2020-09-03 11:31:00,362 p=27800 u=root n=ansible | ok: [localhost]
+2020-09-03 11:31:00,377 p=27800 u=root n=ansible | TASK [Install Python Package Installer (pip)] *******************************************
+2020-09-03 11:31:09,567 p=27800 u=root n=ansible | ok: [localhost]
+2020-09-03 11:31:09,582 p=27800 u=root n=ansible | TASK [Install Docker SDK] ***************************************************************
+2020-09-03 11:31:10,159 p=27800 u=root n=ansible | changed: [localhost]
+2020-09-03 11:31:10,174 p=27800 u=root n=ansible | TASK [Remove all existing containers] ***************************************************
+2020-09-03 11:31:10,425 p=27800 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.079332", "end": "2020-09-03 11:31:10.406498", "msg": "non-zero return code", "rc": 1, "start": "2020-09-03 11:31:10.327166", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-03 11:31:10,425 p=27800 u=root n=ansible | ...ignoring
+2020-09-03 11:31:10,440 p=27800 u=root n=ansible | TASK [Create ubuntu containers] *********************************************************
+2020-09-03 11:31:10,954 p=27800 u=root n=ansible | failed: [localhost] (item=001) => {"ansible_loop_var": "item", "changed": false, "item": "001", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7072cbe5d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:31:11,214 p=27800 u=root n=ansible | failed: [localhost] (item=002) => {"ansible_loop_var": "item", "changed": false, "item": "002", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e7d68f5d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:31:11,216 p=27800 u=root n=ansible | PLAY RECAP ******************************************************************************
+2020-09-03 11:31:11,216 p=27800 u=root n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2020-09-03 11:32:22,529 p=28178 u=root n=ansible | ERROR! the playbook: vvv could not be found
+2020-09-03 11:32:33,480 p=28187 u=root n=ansible | ansible-playbook 2.9.10
+  config file = /root/class/devops-sep-2020/Day3/loops/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-09-03 11:32:33,480 p=28187 u=root n=ansible | Using /root/class/devops-sep-2020/Day3/loops/ansible.cfg as config file
+2020-09-03 11:32:33,498 p=28187 u=root n=ansible | host_list declined parsing /root/class/devops-sep-2020/Day3/loops/hosts as it did not pass its verify_file() method
+2020-09-03 11:32:33,498 p=28187 u=root n=ansible | script declined parsing /root/class/devops-sep-2020/Day3/loops/hosts as it did not pass its verify_file() method
+2020-09-03 11:32:33,498 p=28187 u=root n=ansible | auto declined parsing /root/class/devops-sep-2020/Day3/loops/hosts as it did not pass its verify_file() method
+2020-09-03 11:32:33,502 p=28187 u=root n=ansible | Parsed /root/class/devops-sep-2020/Day3/loops/hosts inventory source with ini plugin
+2020-09-03 11:32:33,772 p=28187 u=root n=ansible | PLAYBOOK: provision-docker-containers.yml ***********************************************
+2020-09-03 11:32:33,773 p=28187 u=root n=ansible | 1 plays in provision-docker-containers.yml
+2020-09-03 11:32:33,776 p=28187 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] **********************
+2020-09-03 11:32:33,783 p=28187 u=root n=ansible | TASK [Gathering Facts] ******************************************************************
+2020-09-03 11:32:33,783 p=28187 u=root n=ansible | task path: /root/class/devops-sep-2020/Day3/loops/provision-docker-containers.yml:1
+2020-09-03 11:32:33,792 p=28196 u=root n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: root
+2020-09-03 11:32:33,792 p=28196 u=root n=ansible | <localhost> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2020-09-03 11:32:33,816 p=28196 u=root n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir /root/.ansible/tmp/ansible-tmp-1599112953.82-28196-268433053600810 && echo ansible-tmp-1599112953.82-28196-268433053600810="` echo /root/.ansible/tmp/ansible-tmp-1599112953.82-28196-268433053600810 `" ) && sleep 0'
+2020-09-03 11:32:34,143 p=28196 u=root n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2020-09-03 11:32:34,144 p=28196 u=root n=ansible | <localhost> PUT /root/.ansible/tmp/ansible-local-28187yoKOF2/tmpTsH3ys TO /root/.ansible/tmp/ansible-tmp-1599112953.82-28196-268433053600810/AnsiballZ_setup.py
+2020-09-03 11:32:34,144 p=28196 u=root n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1599112953.82-28196-268433053600810/ /root/.ansible/tmp/ansible-tmp-1599112953.82-28196-268433053600810/AnsiballZ_setup.py && sleep 0'
+2020-09-03 11:32:34,151 p=28196 u=root n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python2 /root/.ansible/tmp/ansible-tmp-1599112953.82-28196-268433053600810/AnsiballZ_setup.py && sleep 0'
+2020-09-03 11:32:34,684 p=28196 u=root n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1599112953.82-28196-268433053600810/ > /dev/null 2>&1 && sleep 0'
+2020-09-03 11:32:34,723 p=28187 u=root n=ansible | ok: [localhost]
+2020-09-03 11:32:34,724 p=28187 u=root n=ansible | META: ran handlers
+2020-09-03 11:32:34,744 p=28187 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *******************************
+2020-09-03 11:32:34,744 p=28187 u=root n=ansible | task path: /root/class/devops-sep-2020/Day3/loops/provision-docker-containers.yml:4
+2020-09-03 11:32:34,838 p=28280 u=root n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: root
+2020-09-03 11:32:34,838 p=28280 u=root n=ansible | <localhost> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2020-09-03 11:32:34,845 p=28280 u=root n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir /root/.ansible/tmp/ansible-tmp-1599112954.85-28280-182540032853599 && echo ansible-tmp-1599112954.85-28280-182540032853599="` echo /root/.ansible/tmp/ansible-tmp-1599112954.85-28280-182540032853599 `" ) && sleep 0'
+2020-09-03 11:32:35,076 p=28280 u=root n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/packaging/os/yum.py
+2020-09-03 11:32:35,077 p=28280 u=root n=ansible | <localhost> PUT /root/.ansible/tmp/ansible-local-28187yoKOF2/tmpWfY4mS TO /root/.ansible/tmp/ansible-tmp-1599112954.85-28280-182540032853599/AnsiballZ_yum.py
+2020-09-03 11:32:35,077 p=28280 u=root n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1599112954.85-28280-182540032853599/ /root/.ansible/tmp/ansible-tmp-1599112954.85-28280-182540032853599/AnsiballZ_yum.py && sleep 0'
+2020-09-03 11:32:35,084 p=28280 u=root n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python2 /root/.ansible/tmp/ansible-tmp-1599112954.85-28280-182540032853599/AnsiballZ_yum.py && sleep 0'
+2020-09-03 11:32:43,955 p=28280 u=root n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1599112954.85-28280-182540032853599/ > /dev/null 2>&1 && sleep 0'
+2020-09-03 11:32:43,965 p=28187 u=root n=ansible | ok: [localhost] => {
+    "changed": false, 
+    "changes": {
+        "installed": [], 
+        "updated": []
+    }, 
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false, 
+            "autoremove": false, 
+            "bugfix": false, 
+            "conf_file": null, 
+            "disable_excludes": null, 
+            "disable_gpg_check": false, 
+            "disable_plugin": [], 
+            "disablerepo": [], 
+            "download_dir": null, 
+            "download_only": false, 
+            "enable_plugin": [], 
+            "enablerepo": [], 
+            "exclude": [], 
+            "install_repoquery": true, 
+            "install_weak_deps": true, 
+            "installroot": "/", 
+            "list": null, 
+            "lock_timeout": 30, 
+            "name": [
+                "epel-release"
+            ], 
+            "releasever": null, 
+            "security": false, 
+            "skip_broken": false, 
+            "state": "latest", 
+            "update_cache": false, 
+            "update_only": false, 
+            "use_backend": "auto", 
+            "validate_certs": true
+        }
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "All packages providing epel-release are up to date", 
+        ""
+    ]
+}
+2020-09-03 11:32:43,980 p=28187 u=root n=ansible | TASK [Install Python Package Installer (pip)] *******************************************
+2020-09-03 11:32:43,981 p=28187 u=root n=ansible | task path: /root/class/devops-sep-2020/Day3/loops/provision-docker-containers.yml:7
+2020-09-03 11:32:44,077 p=28347 u=root n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: root
+2020-09-03 11:32:44,077 p=28347 u=root n=ansible | <localhost> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2020-09-03 11:32:44,084 p=28347 u=root n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir /root/.ansible/tmp/ansible-tmp-1599112964.08-28347-101833429234168 && echo ansible-tmp-1599112964.08-28347-101833429234168="` echo /root/.ansible/tmp/ansible-tmp-1599112964.08-28347-101833429234168 `" ) && sleep 0'
+2020-09-03 11:32:44,096 p=28347 u=root n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/packaging/os/yum.py
+2020-09-03 11:32:44,097 p=28347 u=root n=ansible | <localhost> PUT /root/.ansible/tmp/ansible-local-28187yoKOF2/tmpptYC5K TO /root/.ansible/tmp/ansible-tmp-1599112964.08-28347-101833429234168/AnsiballZ_yum.py
+2020-09-03 11:32:44,097 p=28347 u=root n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1599112964.08-28347-101833429234168/ /root/.ansible/tmp/ansible-tmp-1599112964.08-28347-101833429234168/AnsiballZ_yum.py && sleep 0'
+2020-09-03 11:32:44,136 p=28347 u=root n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python2 /root/.ansible/tmp/ansible-tmp-1599112964.08-28347-101833429234168/AnsiballZ_yum.py && sleep 0'
+2020-09-03 11:33:01,481 p=28347 u=root n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1599112964.08-28347-101833429234168/ > /dev/null 2>&1 && sleep 0'
+2020-09-03 11:33:01,491 p=28187 u=root n=ansible | ok: [localhost] => {
+    "changed": false, 
+    "changes": {
+        "installed": [], 
+        "updated": []
+    }, 
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false, 
+            "autoremove": false, 
+            "bugfix": false, 
+            "conf_file": null, 
+            "disable_excludes": null, 
+            "disable_gpg_check": false, 
+            "disable_plugin": [], 
+            "disablerepo": [], 
+            "download_dir": null, 
+            "download_only": false, 
+            "enable_plugin": [], 
+            "enablerepo": [], 
+            "exclude": [], 
+            "install_repoquery": true, 
+            "install_weak_deps": true, 
+            "installroot": "/", 
+            "list": null, 
+            "lock_timeout": 30, 
+            "name": [
+                "python-pip"
+            ], 
+            "releasever": null, 
+            "security": false, 
+            "skip_broken": false, 
+            "state": "latest", 
+            "update_cache": false, 
+            "update_only": false, 
+            "use_backend": "auto", 
+            "validate_certs": true
+        }
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "All packages providing python-pip are up to date", 
+        ""
+    ]
+}
+2020-09-03 11:33:01,507 p=28187 u=root n=ansible | TASK [Install Docker SDK] ***************************************************************
+2020-09-03 11:33:01,507 p=28187 u=root n=ansible | task path: /root/class/devops-sep-2020/Day3/loops/provision-docker-containers.yml:10
+2020-09-03 11:33:01,519 p=28418 u=root n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: root
+2020-09-03 11:33:01,519 p=28418 u=root n=ansible | <localhost> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2020-09-03 11:33:01,533 p=28418 u=root n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir /root/.ansible/tmp/ansible-tmp-1599112981.53-28418-39181335022169 && echo ansible-tmp-1599112981.53-28418-39181335022169="` echo /root/.ansible/tmp/ansible-tmp-1599112981.53-28418-39181335022169 `" ) && sleep 0'
+2020-09-03 11:33:01,712 p=28418 u=root n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/commands/command.py
+2020-09-03 11:33:01,713 p=28418 u=root n=ansible | <localhost> PUT /root/.ansible/tmp/ansible-local-28187yoKOF2/tmppwvJnX TO /root/.ansible/tmp/ansible-tmp-1599112981.53-28418-39181335022169/AnsiballZ_command.py
+2020-09-03 11:33:01,713 p=28418 u=root n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1599112981.53-28418-39181335022169/ /root/.ansible/tmp/ansible-tmp-1599112981.53-28418-39181335022169/AnsiballZ_command.py && sleep 0'
+2020-09-03 11:33:01,720 p=28418 u=root n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python2 /root/.ansible/tmp/ansible-tmp-1599112981.53-28418-39181335022169/AnsiballZ_command.py && sleep 0'
+2020-09-03 11:33:02,111 p=28418 u=root n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1599112981.53-28418-39181335022169/ > /dev/null 2>&1 && sleep 0'
+2020-09-03 11:33:02,121 p=28187 u=root n=ansible | changed: [localhost] => {
+    "changed": true, 
+    "cmd": "pip install docker-py", 
+    "delta": "0:00:00.269973", 
+    "end": "2020-09-03 11:33:02.102148", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "pip install docker-py", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "stdin_add_newline": true, 
+            "strip_empty_ends": true, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-09-03 11:33:01.832175", 
+    "stderr": "You are using pip version 8.1.2, however version 20.2.2 is available.\nYou should consider upgrading via the 'pip install --upgrade pip' command.", 
+    "stderr_lines": [
+        "You are using pip version 8.1.2, however version 20.2.2 is available.", 
+        "You should consider upgrading via the 'pip install --upgrade pip' command."
+    ], 
+    "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.7/site-packages\nRequirement already satisfied (use --upgrade to upgrade): requests!=2.11.0,>=2.5.2 in /usr/lib/python2.7/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.7/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): docker-pycreds>=0.2.1 in /usr/lib/python2.7/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.7/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.7/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.7/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): chardet<4,>=3.0.2 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)\nRequirement already satisfied (use --upgrade to upgrade): urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)\nRequirement already satisfied (use --upgrade to upgrade): idna<3,>=2.5 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)\nRequirement already satisfied (use --upgrade to upgrade): certifi>=2017.4.17 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)", 
+    "stdout_lines": [
+        "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.7/site-packages", 
+        "Requirement already satisfied (use --upgrade to upgrade): requests!=2.11.0,>=2.5.2 in /usr/lib/python2.7/site-packages (from docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.7/site-packages (from docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): docker-pycreds>=0.2.1 in /usr/lib/python2.7/site-packages (from docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.7/site-packages (from docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.7/site-packages (from docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.7/site-packages (from docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): chardet<4,>=3.0.2 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): idna<3,>=2.5 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)", 
+        "Requirement already satisfied (use --upgrade to upgrade): certifi>=2017.4.17 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py)"
+    ]
+}
+2020-09-03 11:33:02,136 p=28187 u=root n=ansible | TASK [Remove all existing containers] ***************************************************
+2020-09-03 11:33:02,137 p=28187 u=root n=ansible | task path: /root/class/devops-sep-2020/Day3/loops/provision-docker-containers.yml:13
+2020-09-03 11:33:02,146 p=28449 u=root n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: root
+2020-09-03 11:33:02,147 p=28449 u=root n=ansible | <localhost> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2020-09-03 11:33:02,154 p=28449 u=root n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir /root/.ansible/tmp/ansible-tmp-1599112982.15-28449-96413212340339 && echo ansible-tmp-1599112982.15-28449-96413212340339="` echo /root/.ansible/tmp/ansible-tmp-1599112982.15-28449-96413212340339 `" ) && sleep 0'
+2020-09-03 11:33:02,171 p=28449 u=root n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/commands/command.py
+2020-09-03 11:33:02,171 p=28449 u=root n=ansible | <localhost> PUT /root/.ansible/tmp/ansible-local-28187yoKOF2/tmppk2bFl TO /root/.ansible/tmp/ansible-tmp-1599112982.15-28449-96413212340339/AnsiballZ_command.py
+2020-09-03 11:33:02,172 p=28449 u=root n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1599112982.15-28449-96413212340339/ /root/.ansible/tmp/ansible-tmp-1599112982.15-28449-96413212340339/AnsiballZ_command.py && sleep 0'
+2020-09-03 11:33:02,181 p=28449 u=root n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python2 /root/.ansible/tmp/ansible-tmp-1599112982.15-28449-96413212340339/AnsiballZ_command.py && sleep 0'
+2020-09-03 11:33:02,364 p=28449 u=root n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1599112982.15-28449-96413212340339/ > /dev/null 2>&1 && sleep 0'
+2020-09-03 11:33:02,374 p=28187 u=root n=ansible | fatal: [localhost]: FAILED! => {
+    "changed": true, 
+    "cmd": "docker rm -f $(docker ps -aq)", 
+    "delta": "0:00:00.070578", 
+    "end": "2020-09-03 11:33:02.355082", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "docker rm -f $(docker ps -aq)", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "stdin_add_newline": true, 
+            "strip_empty_ends": true, 
+            "warn": true
+        }
+    }, 
+    "msg": "non-zero return code", 
+    "rc": 1, 
+    "start": "2020-09-03 11:33:02.284504", 
+    "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", 
+    "stderr_lines": [
+        "\"docker rm\" requires at least 1 argument.", 
+        "See 'docker rm --help'.", 
+        "", 
+        "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", 
+        "", 
+        "Remove one or more containers"
+    ], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2020-09-03 11:33:02,374 p=28187 u=root n=ansible | ...ignoring
+2020-09-03 11:33:02,389 p=28187 u=root n=ansible | TASK [Create ubuntu containers] *********************************************************
+2020-09-03 11:33:02,389 p=28187 u=root n=ansible | task path: /root/class/devops-sep-2020/Day3/loops/provision-docker-containers.yml:17
+2020-09-03 11:33:02,432 p=28488 u=root n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: root
+2020-09-03 11:33:02,432 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2020-09-03 11:33:02,446 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir /root/.ansible/tmp/ansible-tmp-1599112982.45-28488-102530291257360 && echo ansible-tmp-1599112982.45-28488-102530291257360="` echo /root/.ansible/tmp/ansible-tmp-1599112982.45-28488-102530291257360 `" ) && sleep 0'
+2020-09-03 11:33:02,704 p=28488 u=root n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/cloud/docker/docker_container.py
+2020-09-03 11:33:02,705 p=28488 u=root n=ansible | <localhost> PUT /root/.ansible/tmp/ansible-local-28187yoKOF2/tmp_Gts3h TO /root/.ansible/tmp/ansible-tmp-1599112982.45-28488-102530291257360/AnsiballZ_docker_container.py
+2020-09-03 11:33:02,705 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1599112982.45-28488-102530291257360/ /root/.ansible/tmp/ansible-tmp-1599112982.45-28488-102530291257360/AnsiballZ_docker_container.py && sleep 0'
+2020-09-03 11:33:02,712 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python2 /root/.ansible/tmp/ansible-tmp-1599112982.45-28488-102530291257360/AnsiballZ_docker_container.py && sleep 0'
+2020-09-03 11:33:02,927 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1599112982.45-28488-102530291257360/ > /dev/null 2>&1 && sleep 0'
+2020-09-03 11:33:02,939 p=28187 u=root n=ansible | The full traceback is:
+WARNING: The below traceback may *not* be related to the actual failure.
+  File "/tmp/ansible_docker_container_payload_5MKmwO/ansible_docker_container_payload.zip/ansible/module_utils/docker/common.py", line 361, in __init__
+    super(AnsibleDockerClient, self).__init__(**self._connect_params)
+  File "/usr/lib/python2.7/site-packages/docker/client.py", line 99, in __init__
+    self._version = self._retrieve_server_version()
+  File "/usr/lib/python2.7/site-packages/docker/client.py", line 124, in _retrieve_server_version
+    'Error while fetching server API version: {0}'.format(e)
+
+2020-09-03 11:33:02,940 p=28187 u=root n=ansible | failed: [localhost] (item=001) => {
+    "ansible_loop_var": "item", 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "api_version": "auto", 
+            "auto_remove": false, 
+            "blkio_weight": null, 
+            "ca_cert": null, 
+            "cap_drop": null, 
+            "capabilities": null, 
+            "cleanup": false, 
+            "client_cert": null, 
+            "client_key": null, 
+            "command": null, 
+            "comparisons": null, 
+            "cpu_period": null, 
+            "cpu_quota": null, 
+            "cpu_shares": null, 
+            "cpuset_cpus": null, 
+            "cpuset_mems": null, 
+            "debug": false, 
+            "detach": true, 
+            "device_read_bps": null, 
+            "device_read_iops": null, 
+            "device_write_bps": null, 
+            "device_write_iops": null, 
+            "devices": null, 
+            "dns_opts": null, 
+            "dns_search_domains": null, 
+            "dns_servers": null, 
+            "docker_host": "tcp://localhost:4243", 
+            "domainname": null, 
+            "entrypoint": null, 
+            "env": null, 
+            "env_file": null, 
+            "etc_hosts": null, 
+            "exposed_ports": null, 
+            "force_kill": false, 
+            "groups": null, 
+            "healthcheck": null, 
+            "hostname": "ubuntu-001", 
+            "ignore_image": false, 
+            "image": "tektutor/ansible-ubuntu", 
+            "init": false, 
+            "interactive": false, 
+            "ipc_mode": null, 
+            "keep_volumes": true, 
+            "kernel_memory": null, 
+            "kill_signal": null, 
+            "labels": null, 
+            "links": null, 
+            "log_driver": null, 
+            "log_options": null, 
+            "mac_address": null, 
+            "memory": "0", 
+            "memory_reservation": null, 
+            "memory_swap": null, 
+            "memory_swappiness": null, 
+            "mounts": null, 
+            "name": "ubuntu-001", 
+            "network_mode": null, 
+            "networks": null, 
+            "networks_cli_compatible": null, 
+            "oom_killer": null, 
+            "oom_score_adj": null, 
+            "output_logs": false, 
+            "paused": false, 
+            "pid_mode": null, 
+            "pids_limit": null, 
+            "ports": [
+                "2001:22", 
+                "8001:80"
+            ], 
+            "privileged": false, 
+            "published_ports": [
+                "2001:22", 
+                "8001:80"
+            ], 
+            "pull": false, 
+            "purge_networks": false, 
+            "read_only": false, 
+            "recreate": false, 
+            "restart": false, 
+            "restart_policy": null, 
+            "restart_retries": null, 
+            "runtime": null, 
+            "security_opts": null, 
+            "shm_size": null, 
+            "ssl_version": null, 
+            "state": "started", 
+            "stop_signal": null, 
+            "stop_timeout": null, 
+            "sysctls": null, 
+            "timeout": 60, 
+            "tls": false, 
+            "tls_hostname": "localhost", 
+            "tmpfs": null, 
+            "trust_image_content": false, 
+            "tty": false, 
+            "ulimits": null, 
+            "user": null, 
+            "userns_mode": null, 
+            "uts": null, 
+            "validate_certs": false, 
+            "volume_driver": null, 
+            "volumes": null, 
+            "volumes_from": null, 
+            "working_dir": null
+        }
+    }, 
+    "item": "001", 
+    "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6582d9c5d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"
+}
+2020-09-03 11:33:02,943 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2020-09-03 11:33:02,951 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir /root/.ansible/tmp/ansible-tmp-1599112982.95-28488-241869502221906 && echo ansible-tmp-1599112982.95-28488-241869502221906="` echo /root/.ansible/tmp/ansible-tmp-1599112982.95-28488-241869502221906 `" ) && sleep 0'
+2020-09-03 11:33:02,964 p=28488 u=root n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/cloud/docker/docker_container.py
+2020-09-03 11:33:02,964 p=28488 u=root n=ansible | <localhost> PUT /root/.ansible/tmp/ansible-local-28187yoKOF2/tmpQzqKim TO /root/.ansible/tmp/ansible-tmp-1599112982.95-28488-241869502221906/AnsiballZ_docker_container.py
+2020-09-03 11:33:02,965 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1599112982.95-28488-241869502221906/ /root/.ansible/tmp/ansible-tmp-1599112982.95-28488-241869502221906/AnsiballZ_docker_container.py && sleep 0'
+2020-09-03 11:33:02,977 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python2 /root/.ansible/tmp/ansible-tmp-1599112982.95-28488-241869502221906/AnsiballZ_docker_container.py && sleep 0'
+2020-09-03 11:33:03,199 p=28488 u=root n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1599112982.95-28488-241869502221906/ > /dev/null 2>&1 && sleep 0'
+2020-09-03 11:33:03,210 p=28187 u=root n=ansible | The full traceback is:
+WARNING: The below traceback may *not* be related to the actual failure.
+  File "/tmp/ansible_docker_container_payload_beVVFy/ansible_docker_container_payload.zip/ansible/module_utils/docker/common.py", line 361, in __init__
+    super(AnsibleDockerClient, self).__init__(**self._connect_params)
+  File "/usr/lib/python2.7/site-packages/docker/client.py", line 99, in __init__
+    self._version = self._retrieve_server_version()
+  File "/usr/lib/python2.7/site-packages/docker/client.py", line 124, in _retrieve_server_version
+    'Error while fetching server API version: {0}'.format(e)
+
+2020-09-03 11:33:03,211 p=28187 u=root n=ansible | failed: [localhost] (item=002) => {
+    "ansible_loop_var": "item", 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "api_version": "auto", 
+            "auto_remove": false, 
+            "blkio_weight": null, 
+            "ca_cert": null, 
+            "cap_drop": null, 
+            "capabilities": null, 
+            "cleanup": false, 
+            "client_cert": null, 
+            "client_key": null, 
+            "command": null, 
+            "comparisons": null, 
+            "cpu_period": null, 
+            "cpu_quota": null, 
+            "cpu_shares": null, 
+            "cpuset_cpus": null, 
+            "cpuset_mems": null, 
+            "debug": false, 
+            "detach": true, 
+            "device_read_bps": null, 
+            "device_read_iops": null, 
+            "device_write_bps": null, 
+            "device_write_iops": null, 
+            "devices": null, 
+            "dns_opts": null, 
+            "dns_search_domains": null, 
+            "dns_servers": null, 
+            "docker_host": "tcp://localhost:4243", 
+            "domainname": null, 
+            "entrypoint": null, 
+            "env": null, 
+            "env_file": null, 
+            "etc_hosts": null, 
+            "exposed_ports": null, 
+            "force_kill": false, 
+            "groups": null, 
+            "healthcheck": null, 
+            "hostname": "ubuntu-002", 
+            "ignore_image": false, 
+            "image": "tektutor/ansible-ubuntu", 
+            "init": false, 
+            "interactive": false, 
+            "ipc_mode": null, 
+            "keep_volumes": true, 
+            "kernel_memory": null, 
+            "kill_signal": null, 
+            "labels": null, 
+            "links": null, 
+            "log_driver": null, 
+            "log_options": null, 
+            "mac_address": null, 
+            "memory": "0", 
+            "memory_reservation": null, 
+            "memory_swap": null, 
+            "memory_swappiness": null, 
+            "mounts": null, 
+            "name": "ubuntu-002", 
+            "network_mode": null, 
+            "networks": null, 
+            "networks_cli_compatible": null, 
+            "oom_killer": null, 
+            "oom_score_adj": null, 
+            "output_logs": false, 
+            "paused": false, 
+            "pid_mode": null, 
+            "pids_limit": null, 
+            "ports": [
+                "2002:22", 
+                "8002:80"
+            ], 
+            "privileged": false, 
+            "published_ports": [
+                "2002:22", 
+                "8002:80"
+            ], 
+            "pull": false, 
+            "purge_networks": false, 
+            "read_only": false, 
+            "recreate": false, 
+            "restart": false, 
+            "restart_policy": null, 
+            "restart_retries": null, 
+            "runtime": null, 
+            "security_opts": null, 
+            "shm_size": null, 
+            "ssl_version": null, 
+            "state": "started", 
+            "stop_signal": null, 
+            "stop_timeout": null, 
+            "sysctls": null, 
+            "timeout": 60, 
+            "tls": false, 
+            "tls_hostname": "localhost", 
+            "tmpfs": null, 
+            "trust_image_content": false, 
+            "tty": false, 
+            "ulimits": null, 
+            "user": null, 
+            "userns_mode": null, 
+            "uts": null, 
+            "validate_certs": false, 
+            "volume_driver": null, 
+            "volumes": null, 
+            "volumes_from": null, 
+            "working_dir": null
+        }
+    }, 
+    "item": "002", 
+    "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd0275895d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"
+}
+2020-09-03 11:33:03,213 p=28187 u=root n=ansible | PLAY RECAP ******************************************************************************
+2020-09-03 11:33:03,214 p=28187 u=root n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2020-09-03 11:35:18,905 p=28629 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] **********************
+2020-09-03 11:35:18,911 p=28629 u=root n=ansible | TASK [Gathering Facts] ******************************************************************
+2020-09-03 11:35:19,763 p=28629 u=root n=ansible | ok: [localhost]
+2020-09-03 11:35:19,778 p=28629 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *******************************
+2020-09-03 11:35:29,079 p=28629 u=root n=ansible | ok: [localhost]
+2020-09-03 11:35:29,094 p=28629 u=root n=ansible | TASK [Install Python Package Installer (pip)] *******************************************
+2020-09-03 11:35:38,911 p=28629 u=root n=ansible | ok: [localhost]
+2020-09-03 11:35:38,926 p=28629 u=root n=ansible | TASK [Install Docker SDK] ***************************************************************
+2020-09-03 11:35:39,502 p=28629 u=root n=ansible | changed: [localhost]
+2020-09-03 11:35:39,517 p=28629 u=root n=ansible | TASK [Remove all existing containers] ***************************************************
+2020-09-03 11:35:39,739 p=28629 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.069000", "end": "2020-09-03 11:35:39.720834", "msg": "non-zero return code", "rc": 1, "start": "2020-09-03 11:35:39.651834", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-03 11:35:39,739 p=28629 u=root n=ansible | ...ignoring
+2020-09-03 11:35:39,754 p=28629 u=root n=ansible | TASK [Create ubuntu containers] *********************************************************
+2020-09-03 11:35:40,282 p=28629 u=root n=ansible | failed: [localhost] (item=001) => {"ansible_loop_var": "item", "changed": false, "item": "001", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f943b6a35d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:35:40,545 p=28629 u=root n=ansible | failed: [localhost] (item=002) => {"ansible_loop_var": "item", "changed": false, "item": "002", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4243): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faeedd8f5d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:35:40,547 p=28629 u=root n=ansible | PLAY RECAP ******************************************************************************
+2020-09-03 11:35:40,547 p=28629 u=root n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2020-09-03 11:41:16,093 p=29209 u=root n=ansible | PLAY [Demonstrates how to provision docker container via Playbook] **********************
+2020-09-03 11:41:16,101 p=29209 u=root n=ansible | TASK [Gathering Facts] ******************************************************************
+2020-09-03 11:41:16,972 p=29209 u=root n=ansible | ok: [localhost]
+2020-09-03 11:41:16,988 p=29209 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL)] *******************************
+2020-09-03 11:41:31,432 p=29209 u=root n=ansible | ok: [localhost]
+2020-09-03 11:41:31,447 p=29209 u=root n=ansible | TASK [Install Python Package Installer (pip)] *******************************************
+2020-09-03 11:41:40,578 p=29209 u=root n=ansible | ok: [localhost]
+2020-09-03 11:41:40,593 p=29209 u=root n=ansible | TASK [Install Docker SDK] ***************************************************************
+2020-09-03 11:41:41,156 p=29209 u=root n=ansible | changed: [localhost]
+2020-09-03 11:41:41,170 p=29209 u=root n=ansible | TASK [Remove all existing containers] ***************************************************
+2020-09-03 11:41:41,403 p=29209 u=root n=ansible | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "docker rm -f $(docker ps -aq)", "delta": "0:00:00.072727", "end": "2020-09-03 11:41:41.385226", "msg": "non-zero return code", "rc": 1, "start": "2020-09-03 11:41:41.312499", "stderr": "\"docker rm\" requires at least 1 argument.\nSee 'docker rm --help'.\n\nUsage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]\n\nRemove one or more containers", "stderr_lines": ["\"docker rm\" requires at least 1 argument.", "See 'docker rm --help'.", "", "Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]", "", "Remove one or more containers"], "stdout": "", "stdout_lines": []}
+2020-09-03 11:41:41,403 p=29209 u=root n=ansible | ...ignoring
+2020-09-03 11:41:41,418 p=29209 u=root n=ansible | TASK [Create ubuntu containers] *********************************************************
+2020-09-03 11:41:41,943 p=29209 u=root n=ansible | failed: [localhost] (item=001) => {"ansible_loop_var": "item", "changed": false, "item": "001", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4244): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff1a61445d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:41:42,207 p=29209 u=root n=ansible | failed: [localhost] (item=002) => {"ansible_loop_var": "item", "changed": false, "item": "002", "msg": "Error connecting: Error while fetching server API version: HTTPConnectionPool(host='localhost', port=4244): Max retries exceeded with url: /version (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0fbd8c35d0>: Failed to establish a new connection: [Errno 111] Connection refused',))"}
+2020-09-03 11:41:42,209 p=29209 u=root n=ansible | PLAY RECAP ******************************************************************************
+2020-09-03 11:41:42,209 p=29209 u=root n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   

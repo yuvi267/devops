@@ -1,0 +1,83 @@
+2020-09-01 23:20:44,863 p=28343 u=root n=ansible | PLAY [This playbook will install, configure and deploy custom html page into nginx web server.] ***
+2020-09-01 23:20:44,884 p=28343 u=root n=ansible | TASK [Gathering Facts] *************************************************************************
+2020-09-01 23:20:46,702 p=28343 u=root n=ansible | ok: [ubuntu2]
+2020-09-01 23:20:46,744 p=28343 u=root n=ansible | ok: [ubuntu1]
+2020-09-01 23:20:59,459 p=28343 u=root n=ansible | ok: [centos1]
+2020-09-01 23:20:59,469 p=28343 u=root n=ansible | ok: [centos2]
+2020-09-01 23:20:59,485 p=28343 u=root n=ansible | TASK [include] *********************************************************************************
+2020-09-01 23:20:59,865 p=28343 u=root n=ansible | included: /root/DevOps/Day3/after-refactoring/install-nginx-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-01 23:20:59,868 p=28343 u=root n=ansible | included: /root/DevOps/Day3/after-refactoring/install-nginx-centos.yml for centos1, centos2
+2020-09-01 23:20:59,892 p=28343 u=root n=ansible | TASK [Install nginx web server into Ubuntu Ansible Node] ***************************************
+2020-09-01 23:21:07,619 p=28343 u=root n=ansible | ok: [ubuntu2]
+2020-09-01 23:21:07,678 p=28343 u=root n=ansible | ok: [ubuntu1]
+2020-09-01 23:21:07,700 p=28343 u=root n=ansible | TASK [Fix the metalink issue in CentOS Ansible Node] *******************************************
+2020-09-01 23:21:08,655 p=28343 u=root n=ansible | ok: [centos2]
+2020-09-01 23:21:08,662 p=28343 u=root n=ansible | ok: [centos1]
+2020-09-01 23:21:08,683 p=28343 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux (EPEL) in CentOS Ansible Node] ***************
+2020-09-01 23:21:16,635 p=28343 u=root n=ansible | ok: [centos1]
+2020-09-01 23:21:21,801 p=28343 u=root n=ansible | ok: [centos2]
+2020-09-01 23:21:21,815 p=28343 u=root n=ansible | TASK [Install nginx web server into CentOS Ansible Node] ***************************************
+2020-09-01 23:21:30,143 p=28343 u=root n=ansible | ok: [centos2]
+2020-09-01 23:21:31,074 p=28343 u=root n=ansible | ok: [centos1]
+2020-09-01 23:21:31,096 p=28343 u=root n=ansible | TASK [include] *********************************************************************************
+2020-09-01 23:21:31,436 p=28343 u=root n=ansible | included: /root/DevOps/Day3/after-refactoring/configure-nginx-ubuntu.yml for ubuntu1, ubuntu2
+2020-09-01 23:21:31,441 p=28343 u=root n=ansible | included: /root/DevOps/Day3/after-refactoring/configure-nginx-centos.yml for centos1, centos2
+2020-09-01 23:21:31,483 p=28343 u=root n=ansible | TASK [Configure nginx web root folder in Ubuntu Ansible Node] **********************************
+2020-09-01 23:21:32,473 p=28343 u=root n=ansible | ok: [ubuntu1]
+2020-09-01 23:21:32,499 p=28343 u=root n=ansible | ok: [ubuntu2]
+2020-09-01 23:21:32,528 p=28343 u=root n=ansible | TASK [Configure nginx web root folder in CentOS Ansible Node] **********************************
+2020-09-01 23:21:33,398 p=28343 u=root n=ansible | ok: [centos1]
+2020-09-01 23:21:33,437 p=28343 u=root n=ansible | ok: [centos2]
+2020-09-01 23:21:33,461 p=28343 u=root n=ansible | TASK [Create the customized web root folder] ***************************************************
+2020-09-01 23:21:34,186 p=28343 u=root n=ansible | ok: [centos1]
+2020-09-01 23:21:34,238 p=28343 u=root n=ansible | ok: [ubuntu1]
+2020-09-01 23:21:34,247 p=28343 u=root n=ansible | ok: [centos2]
+2020-09-01 23:21:34,308 p=28343 u=root n=ansible | ok: [ubuntu2]
+2020-09-01 23:21:34,335 p=28343 u=root n=ansible | TASK [Retrieve IP address of the ansible node] *************************************************
+2020-09-01 23:21:35,400 p=28343 u=root n=ansible | changed: [ubuntu1]
+2020-09-01 23:21:35,508 p=28343 u=root n=ansible | changed: [ubuntu2]
+2020-09-01 23:21:36,254 p=28343 u=root n=ansible | changed: [centos1]
+2020-09-01 23:21:36,402 p=28343 u=root n=ansible | changed: [centos2]
+2020-09-01 23:21:36,421 p=28343 u=root n=ansible | TASK [Deploy custom html web page into nginx on Ansible Node] **********************************
+2020-09-01 23:21:37,723 p=28343 u=root n=ansible | ok: [centos2]
+2020-09-01 23:21:37,800 p=28343 u=root n=ansible | ok: [ubuntu1]
+2020-09-01 23:21:37,809 p=28343 u=root n=ansible | ok: [centos1]
+2020-09-01 23:21:38,033 p=28343 u=root n=ansible | ok: [ubuntu2]
+2020-09-01 23:21:38,067 p=28343 u=root n=ansible | TASK [Restart the nginx service in Ansible Node to apply config changes] ***********************
+2020-09-01 23:21:38,203 p=28343 u=root n=ansible | skipping: [ubuntu1]
+2020-09-01 23:21:38,222 p=28343 u=root n=ansible | skipping: [ubuntu2]
+2020-09-01 23:21:38,261 p=28343 u=root n=ansible | skipping: [centos1]
+2020-09-01 23:21:38,303 p=28343 u=root n=ansible | skipping: [centos2]
+2020-09-01 23:21:38,310 p=28343 u=root n=ansible | PLAY RECAP *************************************************************************************
+2020-09-01 23:21:38,313 p=28343 u=root n=ansible | centos1                    : ok=10   changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-09-01 23:21:38,313 p=28343 u=root n=ansible | centos2                    : ok=10   changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-09-01 23:21:38,313 p=28343 u=root n=ansible | ubuntu1                    : ok=8    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-09-01 23:21:38,314 p=28343 u=root n=ansible | ubuntu2                    : ok=8    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-09-01 23:25:33,177 p=30081 u=root n=ansible | ubuntu2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2020-09-01 23:25:33,178 p=30081 u=root n=ansible | ubuntu1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2020-09-01 23:25:37,962 p=30081 u=root n=ansible | centos2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2020-09-01 23:25:37,968 p=30081 u=root n=ansible | centos1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}

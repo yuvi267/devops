@@ -1,0 +1,8 @@
+- name: Fix the metalink issue
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo
+
+- name: Install Extra Packages for Enterprise Linux
+  yum: name=epel-release state=latest
+
+- name: Install tomcat on CentOS ansible node
+  yum: name=httpd state=latest

@@ -1,0 +1,9 @@
+- name: Configure tomcat web root folder in Ubuntu node
+  copy: src=000-default.conf dest=/etc/apache2/sites-available/000-default.conf
+  notify:
+    - Restart the tomcat web server in Ubuntu
+
+- name: Grant permission to custom web root folder
+  copy: src=apache2.conf dest=/etc/apache2/apache2.conf
+  notify:
+    - Restart the tomcat web server in Ubuntu

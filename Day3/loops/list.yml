@@ -1,0 +1,13 @@
+- name: Demonstrates use of list and navigating/accessing list elements
+  hosts: ubuntu
+  vars:
+    software_tools:
+        - vim
+        - tree
+        - net-tools
+        - iputils-ping
+  tasks:
+    - name: Install software utilities
+      apt: name="{{software_tools}}" state=latest update_cache=yes
+      #apt: name="{{item}}" state=latest update_cache=yes
+      #with_list: "{{software_tools}}"

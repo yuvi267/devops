@@ -1,0 +1,9 @@
+- name: Create the custom web root foler
+  file: path=/var/html state=directory mode=0777
+
+- name: Retrieve IP address of ansible node
+  shell: hostname -i
+  register: ip_addr
+
+- name: Deploy custom html page in tomcat server
+  template: src=index.html.j2 dest=/var/html/index.html

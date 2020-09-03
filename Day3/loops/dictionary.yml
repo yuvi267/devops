@@ -1,0 +1,10 @@
+- name: Demonstrates practical use of dictionary in playbook
+  hosts: localhost
+  vars:
+     env: 
+       JAVA_HOME: /usr/lib/java/jdk8
+       M2_HOME: /usr/share/maven
+
+  tasks:
+    - debug: msg="{{item.key}} --> {{item.value}}"
+      with_dict: "{{env}}"

@@ -1,0 +1,5 @@
+- name: Install Amazon Extra Packages for Enterprise Linux
+  shell: amazon-linux-extras install epel 
+
+- name: Install tomcat on CentOS ansible node
+  yum: name=httpd state=latest

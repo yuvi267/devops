@@ -1,0 +1,4 @@
+- name: Configure web root folder and grant permission in CentoS node
+  copy: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
+  notify:
+    - Restart the tomcat web server in CentOS

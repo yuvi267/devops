@@ -1,0 +1,7 @@
+---
+# handlers file for tomcat
+- name: Restart the tomcat web server in Ubuntu
+  shell: service apache2 restart
+
+- name: Restart the tomcat web server in CentOS
+  shell: service httpd restart
